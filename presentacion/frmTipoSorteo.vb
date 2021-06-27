@@ -1,4 +1,62 @@
 ﻿Public Class frmTipoSorteo
+    Private dt As New DataTable
+    Dim ModoPantalla As ModoPantalla
+
+    Private Sub Mostrar_Datos()
+        Try
+            Dim FuncionMostrar As New fTipoSorteo
+            dt = FuncionMostrar.Mostrar_TipoSorteo
+            If dt.Rows.Count <> 0 Then
+                dataTipoSorteo.DataSource = dt
+            Else
+                dataTipoSorteo.DataSource = Nothing
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Atención: se ha generado un error tratando de mostrar los tipos de sorteo." & Environment.NewLine & "Descripción del error: " & Environment.NewLine & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub Inicia_Pantalla()
+        DeshabilitarTextos(Me)
+        DeshabilitarCombos(Me)
+        If dt.Rows.Count = 0 Then
+            'Al no encontrar datos en la tabla [TipoSorteo]
+            btnModificar.Enabled = False
+            btnEliminar.Enabled = False
+            btnBuscar.Enabled = False
+            cboBuscar.Enabled = False
+            txtBuscar.Enabled = False
+            btnAgregar.Focus()
+        Else
+            btnModificar.Enabled = True
+            btnEliminar.Enabled = True
+            btnBuscar.Enabled = True
+            cboBuscar.Enabled = True : cboBuscar.SelectedIndex = 1
+            txtBuscar.Enabled = True
+            txtBuscar.Focus()
+        End If
+    End Sub
+
+    Private Sub Buscar_Datos()
+        Try
+            Dim ds As New DataSet 'Representa una memoria caché de datos en memoria.
+            ds.Tables.Add(dt.Copy) 'Se realiza una copia de la tabla en memoria.
+            Dim dv As New DataView(ds.Tables(0))
+            If cboBuscar.SelectedItem = "Nombre" Then
+                dv.RowFilter = cboBuscar.Text & " LIKE '%" & txtBuscar.Text & "%'"
+            Else
+                dv.RowFilter = cboBuscar.Text & " = " & txtBuscar.Text
+            End If
+            If dv.Count <> 0 Then
+                dataTipoSorteo.DataSource = dv
+            Else
+                dataTipoSorteo.DataSource = Nothing
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Atención: se ha generado un error tratando de buscar los tipos de sorteo." & Environment.NewLine & "Descripción del error: " & Environment.NewLine & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
     Private Sub frmTipoSorteo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Mostrar_Datos()
         Inicia_Pantalla()
@@ -44,12 +102,10 @@
                     LimpiarTextos(Me)
                     Inicia_Pantalla()
                 Else
-                    MessageBox.Show("El tipo de sorteo no se ha registrado. Vuelva a intentarlo.",
-                    "Confirmar registros", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MessageBox.Show("El tipo de sorteo no se ha registrado. Vuelva a intentarlo.", "Confirmar registros", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
             Catch ex As Exception
-                MessageBox.Show("Atención: se ha generado un error tratando de registrar el tipo de
- sorteo." & Environment.NewLine & "Descripción del error: " & Environment.NewLine &
+                MessageBox.Show("Atención: se ha generado un error tratando de registrar el tipo de sorteo." & Environment.NewLine & "Descripción del error: " & Environment.NewLine &
                 ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End If
@@ -63,7 +119,7 @@
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
         If btnModificar.Text = "Cancelar" Then
-            ModoPantalla = ModoPantalla.ModoConsulta
+            ModoPantalla = ModoPantalla.ModoCONSULTA
             Inicia_Pantalla()
             btnAgregar.Text = "Agregar"
             btnModificar.Text = "Modificar"

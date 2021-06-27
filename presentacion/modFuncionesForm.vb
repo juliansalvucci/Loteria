@@ -1,7 +1,7 @@
 ﻿Public Enum ModoPantalla As Byte  'esta el modo en el modulo para poder aplicarlo en los demás formularios'
     ModoALTA = 0
     ModoMODIFICACION = 1
-    ModoConsulta = 2
+    ModoCONSULTA = 2
 End Enum
 Module modFuncionesForm
     Public Function AbmEvents_KP(ByVal Key As System.Windows.Forms.KeyEventArgs) As Integer
@@ -60,17 +60,21 @@ Module modFuncionesForm
         Next
     End Sub
 
-    For Each obObjeto As Windows.Forms.Control In frmFormulario.Controls
-    If TypeOf obObjeto Is GroupBox Then
-    For Each CajaTexto As Windows.Forms.Control In obObjeto.Controls
-    If TypeOf CajaTexto Is TextBox Then
-    CType(CajaTexto, TextBox).Enabled = True
-    End If
-    Next
-    ElseIf TypeOf obObjeto Is TextBox Then
-    CType(obObjeto, TextBox).Enabled = True
-    End If
-    Next
+    Public Sub HabilitarTextos(ByVal frmFormulario As Form)
+        'Establece la propiedad Enabled = True en todos los TextBox del formulario en los parámetros.
+
+        For Each obObjeto As Windows.Forms.Control In frmFormulario.Controls
+            If TypeOf obObjeto Is GroupBox Then
+                For Each CajaTexto As Windows.Forms.Control In obObjeto.Controls
+                    If TypeOf CajaTexto Is TextBox Then
+                        CType(CajaTexto, TextBox).Enabled = True
+                    End If
+                Next
+            ElseIf TypeOf obObjeto Is TextBox Then
+                CType(obObjeto, TextBox).Enabled = True
+            End If
+        Next
     End Sub
+
 
 End Module
