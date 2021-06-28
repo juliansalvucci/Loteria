@@ -46,8 +46,7 @@
     Public Sub New()
     End Sub
 
-    Public Sub New(ByVal ID As Integer, ByVal NombreUsu As String, ByVal Login As String, ByVal
-        Password As String, ByVal Habilitado As Byte)
+    Public Sub New(ByVal ID As Integer, ByVal NombreUsu As String, ByVal Login As String, ByVal Password As String, ByVal Habilitado As Byte)
         pID = ID
         pNombreUsu = NombreUsu
         pLogin = Login

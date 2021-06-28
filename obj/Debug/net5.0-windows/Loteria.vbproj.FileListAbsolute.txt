@@ -1,0 +1,10 @@
+C:\Users\julia\source\repos\Loteria\obj\Debug\net5.0-windows\Loteria.vbprojAssemblyReference.cache
+C:\Users\julia\source\repos\Loteria\obj\Debug\net5.0-windows\Loteria.Form1.resources
+C:\Users\julia\source\repos\Loteria\obj\Debug\net5.0-windows\Loteria.frmLogin.resources
+C:\Users\julia\source\repos\Loteria\obj\Debug\net5.0-windows\Loteria.frmPrincipal.resources
+C:\Users\julia\source\repos\Loteria\obj\Debug\net5.0-windows\Loteria.frmTipoSorteo.resources
+C:\Users\julia\source\repos\Loteria\obj\Debug\net5.0-windows\Loteria.vbproj.GenerateResource.cache
+C:\Users\julia\source\repos\Loteria\obj\Debug\net5.0-windows\Loteria.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\julia\source\repos\Loteria\obj\Debug\net5.0-windows\Loteria.AssemblyInfoInputs.cache
+C:\Users\julia\source\repos\Loteria\obj\Debug\net5.0-windows\Loteria.AssemblyInfo.vb
+C:\Users\julia\source\repos\Loteria\obj\Debug\net5.0-windows\Loteria.vbproj.CoreCompileInputs.cache

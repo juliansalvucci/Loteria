@@ -58,9 +58,7 @@ Public Class fTipoSorteo
                 Return False
             End If
         Catch ex As Exception
-            MessageBox.Show("Atención: se ha generado un error tratando de registrar el tipo de
- sorteo." & Environment.NewLine & "Descripción del error: " & Environment.NewLine &
-            ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Atención: se ha generado un error tratando de registrar el tipo de sorteo." & Environment.NewLine & "Descripción del error: " & Environment.NewLine & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return False
         Finally
             funcCerrarConnDB()
@@ -84,9 +82,7 @@ Public Class fTipoSorteo
                 Return False
             End If
         Catch ex As Exception
-            MessageBox.Show("Atención: se ha generado un error tratando de registrar el tipo de
- sorteo." & Environment.NewLine & "Descripción del error: " & Environment.NewLine &
- ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Atención: se ha generado un error tratando de registrar el tipo de sorteo." & Environment.NewLine & "Descripción del error: " & Environment.NewLine & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return False
         Finally
             funcCerrarConnDB()
@@ -109,10 +105,8 @@ Public Class fTipoSorteo
                 Return False
             End If
         Catch ex As Exception
-            MessageBox.Show("Atención: se ha generado un error tratando de eliminar el tipo de sorteo."
- & Environment.NewLine & "Descripción del error: " & Environment.NewLine & ex.Message,
- "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
- Return False
+            MessageBox.Show("Atención: se ha generado un error tratando de eliminar el tipo de sorteo." & Environment.NewLine & "Descripción del error: " & Environment.NewLine & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False
         Finally
             funcCerrarConnDB()
         End Try

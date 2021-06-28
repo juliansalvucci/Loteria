@@ -22,6 +22,7 @@ Partial Class frmTipoSorteo
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.lblDescripcion = New System.Windows.Forms.Label()
@@ -40,10 +41,12 @@ Partial Class frmTipoSorteo
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.cboBuscar = New System.Windows.Forms.ComboBox()
         Me.btnCerrar = New System.Windows.Forms.Button()
+        Me.ErrProvTipoSorteo = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.txtBuscar.SuspendLayout()
         CType(Me.dataTipoSorteo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrProvTipoSorteo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -212,6 +215,10 @@ Partial Class frmTipoSorteo
         Me.btnCerrar.Text = "Button1"
         Me.btnCerrar.UseVisualStyleBackColor = True
         '
+        'ErrProvTipoSorteo
+        '
+        Me.ErrProvTipoSorteo.ContainerControl = Me
+        '
         'frmTipoSorteo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -230,6 +237,7 @@ Partial Class frmTipoSorteo
         Me.txtBuscar.ResumeLayout(False)
         Me.txtBuscar.PerformLayout()
         CType(Me.dataTipoSorteo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrProvTipoSorteo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -252,4 +260,5 @@ Partial Class frmTipoSorteo
     Friend WithEvents btnModificar As Button
     Friend WithEvents btnAgregar As Button
     Friend WithEvents btnCerrar As Button
+    Friend WithEvents ErrProvTipoSorteo As ErrorProvider
 End Class
