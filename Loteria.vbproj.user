@@ -16,5 +16,8 @@
     <Compile Update="presentacion\frmTipoSorteo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="presentacion\frmUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
