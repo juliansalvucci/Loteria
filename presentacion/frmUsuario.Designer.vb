@@ -33,7 +33,7 @@ Partial Class frmUsuario
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.lblNombre = New System.Windows.Forms.Label()
         Me.lblID = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -41,7 +41,7 @@ Partial Class frmUsuario
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.dataTipoSorteo = New System.Windows.Forms.DataGridView()
+        Me.dataUsuario = New System.Windows.Forms.DataGridView()
         Me.cboBuscar = New System.Windows.Forms.ComboBox()
         Me.txtBuscar = New System.Windows.Forms.TextBox()
         Me.btnBuscar = New System.Windows.Forms.Button()
@@ -49,7 +49,7 @@ Partial Class frmUsuario
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
-        CType(Me.dataTipoSorteo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dataUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -72,7 +72,7 @@ Partial Class frmUsuario
         Me.GroupBox2.Controls.Add(Me.TextBox1)
         Me.GroupBox2.Controls.Add(Me.lblNombre)
         Me.GroupBox2.Controls.Add(Me.lblID)
-        Me.GroupBox2.Controls.Add(Me.TextBox2)
+        Me.GroupBox2.Controls.Add(Me.txtNombre)
         Me.GroupBox2.Controls.Add(Me.txtID)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 65)
         Me.GroupBox2.Name = "GroupBox2"
@@ -156,12 +156,12 @@ Partial Class frmUsuario
         Me.lblID.TabIndex = 4
         Me.lblID.Text = "ID"
         '
-        'TextBox2
+        'txtNombre
         '
-        Me.TextBox2.Location = New System.Drawing.Point(152, 52)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(135, 23)
-        Me.TextBox2.TabIndex = 2
+        Me.txtNombre.Location = New System.Drawing.Point(152, 52)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(135, 23)
+        Me.txtNombre.TabIndex = 2
         '
         'txtID
         '
@@ -221,7 +221,7 @@ Partial Class frmUsuario
         '
         'GroupBox4
         '
-        Me.GroupBox4.Controls.Add(Me.dataTipoSorteo)
+        Me.GroupBox4.Controls.Add(Me.dataUsuario)
         Me.GroupBox4.Controls.Add(Me.cboBuscar)
         Me.GroupBox4.Controls.Add(Me.txtBuscar)
         Me.GroupBox4.Controls.Add(Me.btnBuscar)
@@ -232,14 +232,14 @@ Partial Class frmUsuario
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "GroupBox4"
         '
-        'dataTipoSorteo
+        'dataUsuario
         '
-        Me.dataTipoSorteo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dataTipoSorteo.Location = New System.Drawing.Point(0, 52)
-        Me.dataTipoSorteo.Name = "dataTipoSorteo"
-        Me.dataTipoSorteo.RowTemplate.Height = 25
-        Me.dataTipoSorteo.Size = New System.Drawing.Size(776, 127)
-        Me.dataTipoSorteo.TabIndex = 6
+        Me.dataUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dataUsuario.Location = New System.Drawing.Point(0, 52)
+        Me.dataUsuario.Name = "dataUsuario"
+        Me.dataUsuario.RowTemplate.Height = 25
+        Me.dataUsuario.Size = New System.Drawing.Size(776, 127)
+        Me.dataUsuario.TabIndex = 6
         '
         'cboBuscar
         '
@@ -292,7 +292,7 @@ Partial Class frmUsuario
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
-        CType(Me.dataTipoSorteo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dataUsuario, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -307,8 +307,8 @@ Partial Class frmUsuario
     Friend WithEvents btnBuscar As Button
     Friend WithEvents txtBuscar As TextBox
     Friend WithEvents cboBuscar As ComboBox
-    Friend WithEvents dataTipoSorteo As DataGridView
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents dataUsuario As DataGridView
+    Friend WithEvents txtNombre As TextBox
     Friend WithEvents txtID As TextBox
     Friend WithEvents lblID As Label
     Friend WithEvents lblNombre As Label
