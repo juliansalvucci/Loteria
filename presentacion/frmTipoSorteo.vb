@@ -141,7 +141,25 @@
         End If
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
-
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+        Dim Respuesta As Integer = MessageBox.Show("Atención: ha seleccionado eliminar un tipo de sorteo. " & Environment.NewLine & "¿Confirma la eliminación?", "Eliminación de tipos de sorteo", MessageBoxButtons.YesNo, MessageBoxIcon.Error)
+        If Respuesta = MsgBoxResult.Yes Then
+            Try
+                Dim dts As New logTipoSorteo
+                Dim FuncionInsertar As New fTipoSorteo
+                dts.pID = txtID.Text
+                If FuncionInsertar.Eliminar_TipoSorteo(dts) Then
+                    Mostrar_Datos()
+                    LimpiarTextos(Me)
+                    Inicia_Pantalla()
+                Else
+                    MessageBox.Show("El tipo de sorteo no se ha eliminado. Vuelva a intentarlo.",
+                    "Eliminar registros", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End If
+            Catch ex As Exception
+                MessageBox.Show("Atención: se ha generado un error tratando de eliminar el tipo de sorteo." & Environment.NewLine & "Descripción del error: " & Environment.NewLine &
+                ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
+        End If
     End Sub
 End Class

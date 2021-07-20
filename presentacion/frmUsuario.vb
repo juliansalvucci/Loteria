@@ -100,7 +100,8 @@
                 Dim dts As New logUsuario
                 Dim funcioninsertar As New fUsuario
                 dts.pNombreUsu = txtNombre.Text
-                'AGREGAR EL RESTO
+                dts.pLogin = txtLogin.Text
+                dts.pPassword = txtPassword.Text
                 If funcioninsertar.Insertar_Usuario(dts) Then
                     mostrar_datos()
                     LimpiarTextos(Me)
@@ -111,6 +112,61 @@
             Catch ex As Exception
                 MessageBox.Show("atención: se ha generado un error tratando de registrar el usuario." & Environment.NewLine & "descripción del error: " & Environment.NewLine &
                 ex.Message, "error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
+        End If
+    End Sub
+
+
+
+    Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
+        If btnModificar.Text = "Cancelar" Then
+            modopantalla = ModoPantalla.ModoCONSULTA
+            inicia_pantalla()
+            btnAgregar.Text = "Agregar"
+            btnModificar.Text = "Modificar"
+            btnCerrar.Enabled = True
+            dataUsuario.Enabled = True
+            ErrProvUsuario.SetError(txtNombre, "")
+        Else
+            modopantalla = ModoPantalla.ModoMODIFICACION
+            HabilitarTextos(Me)
+            btnEliminar.Enabled = False
+            btnBuscar.Enabled = False
+            btnCerrar.Enabled = False
+            cboBuscar.Enabled = False
+            txtBuscar.Enabled = False
+            dataUsuario.Enabled = False
+            btnAgregar.Text = "Confirmar"
+            btnModificar.Text = "Cancelar"
+            txtNombre.Focus()
+        End If
+    End Sub
+
+    Private Sub dataUsuario_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dataUsuario.CellContentClick
+        txtID.Text = dataUsuario.SelectedCells.Item(0).Value
+        txtNombre.Text = dataUsuario.SelectedCells.Item(1).Value
+        txtLogin.Text = dataUsuario.SelectedCells.Item(2).Value
+        txtPassword.Text = dataUsuario.SelectedCells.Item(3).Value
+    End Sub
+
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+        Dim Respuesta As Integer = MessageBox.Show("Atención: ha seleccionado eliminar un usuario. " & Environment.NewLine & "¿Confirma la eliminación?", "Eliminación de usuario", MessageBoxButtons.YesNo, MessageBoxIcon.Error)
+        If Respuesta = MsgBoxResult.Yes Then
+            Try
+                Dim dts As New logUsuario
+                Dim FuncionInsertar As New fUsuario
+                dts.pID = txtID.Text
+                If FuncionInsertar.Eliminar_Usuario(dts) Then
+                    mostrar_datos()
+                    LimpiarTextos(Me)
+                    inicia_pantalla()
+                Else
+                    MessageBox.Show("El usuario no se ha eliminado. Vuelva a intentarlo.",
+                    "Eliminar registros", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End If
+            Catch ex As Exception
+                MessageBox.Show("Atención: se ha generado un error tratando de eliminar el usuario." & Environment.NewLine & "Descripción del error: " & Environment.NewLine &
+                ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End If
     End Sub
