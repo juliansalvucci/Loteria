@@ -73,7 +73,7 @@ Public Class fUsuario
             cmd.Connection = CNN
             cmd.Parameters.AddWithValue("@NombreUsuario", dts.pNombreUsu)
             cmd.Parameters.AddWithValue("@Login", dts.pLogin)
-            cmd.Parameters.AddWithValue("@Password", dts.pPassword)
+            cmd.Parameters.AddWithValue("@Passw", dts.pPassword)
             If cmd.ExecuteNonQuery Then
                 Return True
             Else
@@ -98,7 +98,7 @@ Public Class fUsuario
             cmd.Parameters.AddWithValue("@ID", dts.pID)
             cmd.Parameters.AddWithValue("@NombreUsuario", dts.pNombreUsu)
             cmd.Parameters.AddWithValue("@Login", dts.pLogin)
-            cmd.Parameters.AddWithValue("@Password", dts.pPassword)
+            cmd.Parameters.AddWithValue("@Passw", dts.pPassword)
             If cmd.ExecuteNonQuery Then
                 Return True
             Else

@@ -22,6 +22,7 @@ Partial Class frmUsuario
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -46,10 +47,12 @@ Partial Class frmUsuario
         Me.txtBuscar = New System.Windows.Forms.TextBox()
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.btnCerrar = New System.Windows.Forms.Button()
+        Me.ErrProvUsuario = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         CType(Me.dataUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrProvUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -276,6 +279,10 @@ Partial Class frmUsuario
         Me.btnCerrar.Text = "Cerrar"
         Me.btnCerrar.UseVisualStyleBackColor = True
         '
+        'ErrProvUsuario
+        '
+        Me.ErrProvUsuario.ContainerControl = Me
+        '
         'frmUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -295,6 +302,7 @@ Partial Class frmUsuario
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         CType(Me.dataUsuario, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrProvUsuario, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -323,4 +331,5 @@ Partial Class frmUsuario
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents ErrProvUsuario As ErrorProvider
 End Class

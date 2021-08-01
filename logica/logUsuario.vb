@@ -2,7 +2,7 @@
     Dim ID As Integer
     Dim NombreUsu, Login, Password As String
     Dim Habilitado As Byte
-    Public Property pID
+    Public Property pID 'pID: ID  de propiedad.
         Get
             Return ID
         End Get

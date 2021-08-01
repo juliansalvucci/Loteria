@@ -92,4 +92,8 @@ Public Class frmPrincipal
     Private Sub frmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub ABMCRUsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ABMCRUsuarioToolStripMenuItem.Click
+        frmUsuario.Show()
+    End Sub
 End Class

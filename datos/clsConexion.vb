@@ -1,9 +1,9 @@
 ﻿Imports System.Data.SqlClient
-Public Class ClsConexion
-    Protected CNN As New SqlConnection 'Representa una conexión a una base de datos SQL Server.
-    Const strConexion As String = "Data Source=OBELIX-NB3\SQLExpress;User ID=sa;Password=qwer*1234;Initial Catalog=Loteria;Integrated Security=False"
+Public Class ClsConexion 'establece la conexión con bd.
+    Protected CNN As New SqlConnection 'Representa una conexión a una base de datos SQL Server que va a usar el string de conexión strConexión.
+    Const strConexion As String = "Data Source=DESKTOP-0836GCF;User ID=sa;Password=qwer*1234;Initial Catalog=Loteria;Integrated Security=True"
+    'Data source, va lo que aparece en autenticación, si es true ingreso con windows autentication si es false es con sqlautentication.
     Protected Function funcConectarDB() As Boolean
-
         Try
             CNN = New SqlConnection(strConexion)
             CNN.Open() 'Abrimos la conexión.
@@ -13,9 +13,7 @@ Public Class ClsConexion
             Return False
         End Try
     End Function
-
     Protected Function funcCerrarConnDB() As Boolean
-
         Try
             If CNN.State = ConnectionState.Open Then
                 CNN.Close()
@@ -31,6 +29,4 @@ Public Class ClsConexion
 
         End Try
     End Function
-
-
 End Class

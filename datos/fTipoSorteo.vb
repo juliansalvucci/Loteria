@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class fTipoSorteo
+Public Class fTipoSorteo  'f porqueIncorpora las funciones públicas principales para el manejo de tipos de sorteos. 
     Inherits ClsConexion 'La clase o interfaz actual hereda los atributos, variables, propiedades,procedimientos y eventos de otra clase o conjunto de interfaces.
     Dim cmd As SqlCommand 'variable que permite ejecutar instrucciones de la base de datos'
 
@@ -10,35 +10,27 @@ Public Class fTipoSorteo
 
         Try
             funcConectarDB()  'abrir conexión con base de datos'
-            cmd = New SqlCommand("procMostrar_TipoSorteo") 'procedimiento almacenado que consulta y muestra los tipos de sorteos y los ordena por nombre, se llama procMostrar_TipoSorteo' 
+            cmd = New SqlCommand("procMostrar_TipoSorteo") 'se genera una instancia SqlCommand que ejecuta el procedimiento almacenado que consulta y muestra los tipos de sorteos y los ordena por nombre, se llama procMostrar_TipoSorteo' 
             cmd.CommandType = CommandType.StoredProcedure 'string que contiene el comando de la base de datos'
 
-            cmd.Connection = CNN
+            cmd.Connection = CNN 'CNN refiere al string de conexión que está activo, puede haber varias. Ej: CNN1, CNN2, etc.
 
             If cmd.ExecuteNonQuery Then 'ejecuta comando en base de datos, devuelve true o false'
 
-                Dim dt As New DataTable   'la conexión se abre'
-                Dim da As New SqlDataAdapter(cmd)
+                Dim dt As New DataTable
+                Dim da As New SqlDataAdapter(cmd) 'data adapter con conexión activa cmd.
 
-                da.Fill(dt)
+                da.Fill(dt) 'se guarda una copia de la tabla de la base de datos.
 
-                Return dt
-
+                Return dt  'Si todo anda bien, retorna una tabla de la base de datos.
             Else
-
                 Return Nothing
-
             End If
-
-        Catch ex As Exception 'error y detalle de error'
-
+        Catch ex As Exception 'captura de exepción o error y detalle de error'
             MessageBox.Show("Atención: se ha generado un error tratando de mostrar los tipos de sorteo." & Environment.NewLine & "Descripción del error: " & Environment.NewLine & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-
             Return Nothing
         Finally
-
             funcCerrarConnDB() 'la conexión se cierra y el finally permite que se cierre haya ocurrido un error o no'
-
         End Try
     End Function
 

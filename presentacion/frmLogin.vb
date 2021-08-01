@@ -15,7 +15,7 @@ Public Class frmLogin
             dts.pLogin = UsernameTextBox.Text
             dts.pPassword = PasswordTextBox.Text
             If FuncionValidar.Validar_Usuario(dts) = True Then
-                frmPrincipal.Show()
+                frmUsuario.Show()
                 Me.Close()
             Else
                 MessageBox.Show("Atención: el usuario y/o la contraseña ingresados no son correctos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)

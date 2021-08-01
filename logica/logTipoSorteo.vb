@@ -1,4 +1,4 @@
-﻿Public Class logTipoSorteo
+﻿Public Class logTipoSorteo 'incorpora las propiedades de tipo de sorteo para trabajar con la bd.
     Dim ID As Integer
     Dim Nombre, Descripcion As String
 

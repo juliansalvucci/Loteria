@@ -38,7 +38,7 @@ Partial Class frmTipoSorteo
         Me.txtBuscar = New System.Windows.Forms.GroupBox()
         Me.dataTipoSorteo = New System.Windows.Forms.DataGridView()
         Me.btnBuscar = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtBBuscar = New System.Windows.Forms.TextBox()
         Me.cboBuscar = New System.Windows.Forms.ComboBox()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.ErrProvTipoSorteo = New System.Windows.Forms.ErrorProvider(Me.components)
@@ -111,13 +111,14 @@ Partial Class frmTipoSorteo
         '
         Me.txtDescripcion.Location = New System.Drawing.Point(252, 81)
         Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(100, 23)
+        Me.txtDescripcion.Size = New System.Drawing.Size(322, 23)
         Me.txtDescripcion.TabIndex = 1
         '
         'txtID
         '
         Me.txtID.Location = New System.Drawing.Point(252, 22)
         Me.txtID.Name = "txtID"
+        Me.txtID.ReadOnly = True
         Me.txtID.Size = New System.Drawing.Size(100, 23)
         Me.txtID.TabIndex = 0
         '
@@ -164,7 +165,7 @@ Partial Class frmTipoSorteo
         '
         Me.txtBuscar.Controls.Add(Me.dataTipoSorteo)
         Me.txtBuscar.Controls.Add(Me.btnBuscar)
-        Me.txtBuscar.Controls.Add(Me.TextBox1)
+        Me.txtBuscar.Controls.Add(Me.txtBBuscar)
         Me.txtBuscar.Controls.Add(Me.cboBuscar)
         Me.txtBuscar.Location = New System.Drawing.Point(1, 195)
         Me.txtBuscar.Name = "txtBuscar"
@@ -191,12 +192,12 @@ Partial Class frmTipoSorteo
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'txtBBuscar
         '
-        Me.TextBox1.Location = New System.Drawing.Point(149, 23)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(453, 23)
-        Me.TextBox1.TabIndex = 1
+        Me.txtBBuscar.Location = New System.Drawing.Point(149, 23)
+        Me.txtBBuscar.Name = "txtBBuscar"
+        Me.txtBBuscar.Size = New System.Drawing.Size(453, 23)
+        Me.txtBBuscar.TabIndex = 1
         '
         'cboBuscar
         '
@@ -212,7 +213,7 @@ Partial Class frmTipoSorteo
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(75, 23)
         Me.btnCerrar.TabIndex = 4
-        Me.btnCerrar.Text = "Button1"
+        Me.btnCerrar.Text = "Cerrar"
         Me.btnCerrar.UseVisualStyleBackColor = True
         '
         'ErrProvTipoSorteo
@@ -254,7 +255,7 @@ Partial Class frmTipoSorteo
     Friend WithEvents txtBuscar As GroupBox
     Friend WithEvents dataTipoSorteo As DataGridView
     Friend WithEvents btnBuscar As Button
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtBBuscar As TextBox
     Friend WithEvents cboBuscar As ComboBox
     Friend WithEvents btnEliminar As Button
     Friend WithEvents btnModificar As Button
