@@ -26,6 +26,8 @@ Partial Class frmPrincipal
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPrincipal))
         Me.MenuStrip = New System.Windows.Forms.MenuStrip()
+        Me.ABMCTipoSorteoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStrip = New System.Windows.Forms.ToolStrip()
         Me.NewToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.OpenToolStripButton = New System.Windows.Forms.ToolStripButton()
@@ -38,8 +40,6 @@ Partial Class frmPrincipal
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.ABMCTipoSorteoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
@@ -53,6 +53,18 @@ Partial Class frmPrincipal
         Me.MenuStrip.Size = New System.Drawing.Size(632, 24)
         Me.MenuStrip.TabIndex = 5
         Me.MenuStrip.Text = "MenuStrip"
+        '
+        'ABMCTipoSorteoToolStripMenuItem
+        '
+        Me.ABMCTipoSorteoToolStripMenuItem.Name = "ABMCTipoSorteoToolStripMenuItem"
+        Me.ABMCTipoSorteoToolStripMenuItem.Size = New System.Drawing.Size(113, 20)
+        Me.ABMCTipoSorteoToolStripMenuItem.Text = "ABMC TipoSorteo"
+        '
+        'UsuarioToolStripMenuItem
+        '
+        Me.UsuarioToolStripMenuItem.Name = "UsuarioToolStripMenuItem"
+        Me.UsuarioToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
+        Me.UsuarioToolStripMenuItem.Text = "Usuario "
         '
         'ToolStrip
         '
@@ -141,18 +153,6 @@ Partial Class frmPrincipal
         Me.ToolStripStatusLabel.Name = "ToolStripStatusLabel"
         Me.ToolStripStatusLabel.Size = New System.Drawing.Size(42, 17)
         Me.ToolStripStatusLabel.Text = "Estado"
-        '
-        'ABMCTipoSorteoToolStripMenuItem
-        '
-        Me.ABMCTipoSorteoToolStripMenuItem.Name = "ABMCTipoSorteoToolStripMenuItem"
-        Me.ABMCTipoSorteoToolStripMenuItem.Size = New System.Drawing.Size(113, 20)
-        Me.ABMCTipoSorteoToolStripMenuItem.Text = "ABMC TipoSorteo"
-        '
-        'UsuarioToolStripMenuItem
-        '
-        Me.UsuarioToolStripMenuItem.Name = "UsuarioToolStripMenuItem"
-        Me.UsuarioToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
-        Me.UsuarioToolStripMenuItem.Text = "Usuario "
         '
         'frmPrincipal
         '

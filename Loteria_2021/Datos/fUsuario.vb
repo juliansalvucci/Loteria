@@ -9,7 +9,7 @@ Public Class fUsuario
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Connection = CNN
             cmd.Parameters.AddWithValue("@Login", dts.pLogin)
-            cmd.Parameters.AddWithValue("@Passw", dts.pPassword)
+            cmd.Parameters.AddWithValue("@Password", dts.pPassword)
             Dim dr As SqlDataReader
             dr = cmd.ExecuteReader
             If dr.HasRows = True Then
@@ -31,7 +31,7 @@ Public Class fUsuario
 
         Try
             funcConectarDB()  'abrir conexión con base de datos'
-            cmd = New SqlCommand("Consultar_Usuario") 'procedimiento almacenado que consulta y muestra los tipos de sorteos y los ordena por nombre, se llama procMostrar_TipoSorteo' 
+            cmd = New SqlCommand("procMostrar_Usuarios") 'procedimiento almacenado que consulta y muestra los tipos de sorteos y los ordena por nombre, se llama procMostrar_TipoSorteo' 
             cmd.CommandType = CommandType.StoredProcedure 'string que contiene el comando de la base de datos'
 
             cmd.Connection = CNN
@@ -68,12 +68,12 @@ Public Class fUsuario
         'Sino, devolverá FALSO.
         Try
             funcConectarDB()
-            cmd = New SqlCommand("Alta_Usuario")
+            cmd = New SqlCommand("INSERTAR_Usuarios")
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Connection = CNN
-            cmd.Parameters.AddWithValue("@NombreUsuario", dts.pNombreUsu)
+            cmd.Parameters.AddWithValue("@NombreUsu", dts.pNombreUsu)
             cmd.Parameters.AddWithValue("@Login", dts.pLogin)
-            cmd.Parameters.AddWithValue("@Passw", dts.pPassword)
+            cmd.Parameters.AddWithValue("@Password", dts.pPassword)
             If cmd.ExecuteNonQuery Then
                 Return True
             Else
@@ -92,12 +92,12 @@ Public Class fUsuario
         'Sino, devolverá FALSO.
         Try
             funcConectarDB()
-            cmd = New SqlCommand("Modificacion_Usuario")
+            cmd = New SqlCommand("EDITAR_Usuarios")
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Connection = CNN
-            cmd.Parameters.AddWithValue("@NombreUsuario", dts.pNombreUsu)
+            cmd.Parameters.AddWithValue("@NombreUsu", dts.pNombreUsu)
             cmd.Parameters.AddWithValue("@Login", dts.pLogin)
-            cmd.Parameters.AddWithValue("@Passw", dts.pPassword)
+            cmd.Parameters.AddWithValue("@Password", dts.pPassword)
             If cmd.ExecuteNonQuery Then
                 Return True
             Else
@@ -116,7 +116,7 @@ Public Class fUsuario
         'Sino, devolverá FALSO.
         Try
             funcConectarDB()
-            cmd = New SqlCommand("Baja_Usuario")
+            cmd = New SqlCommand("ELIMINAR_Usuarios")
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Connection = CNN
             cmd.Parameters.AddWithValue("@ID", dts.pID)

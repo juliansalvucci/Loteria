@@ -52,13 +52,9 @@ Public Class frmPrincipal
         'Utilice My.Computer.Clipboard.GetText() o My.Computer.Clipboard.GetData para recuperar la información del Portapapeles.
     End Sub
 
-    Private Sub ToolBarToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) 
-        Me.ToolStrip.Visible = Me.ToolBarToolStripMenuItem.Checked
-    End Sub
 
-    Private Sub StatusBarToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) 
-        Me.StatusStrip.Visible = Me.StatusBarToolStripMenuItem.Checked
-    End Sub
+
+
 
     Private Sub CascadeToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) 
         Me.LayoutMdi(MdiLayout.Cascade)
@@ -85,4 +81,11 @@ Public Class frmPrincipal
 
     Private m_ChildFormNumber As Integer
 
+    Private Sub ABMCTipoSorteoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ABMCTipoSorteoToolStripMenuItem.Click
+        frmTipoSorteo.Show()
+    End Sub
+
+    Private Sub UsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UsuarioToolStripMenuItem.Click
+
+    End Sub
 End Class

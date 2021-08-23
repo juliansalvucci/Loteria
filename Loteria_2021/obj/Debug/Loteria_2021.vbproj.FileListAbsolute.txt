@@ -10,3 +10,6 @@ C:\Users\julia\source\repos\Loteria_2021\Loteria_2021\obj\Debug\Loteria_2021.vbp
 C:\Users\julia\source\repos\Loteria_2021\Loteria_2021\obj\Debug\Loteria_2021.exe
 C:\Users\julia\source\repos\Loteria_2021\Loteria_2021\obj\Debug\Loteria_2021.xml
 C:\Users\julia\source\repos\Loteria_2021\Loteria_2021\obj\Debug\Loteria_2021.pdb
+C:\Users\julia\source\repos\Loteria_2021\Loteria_2021\obj\Debug\Loteria_2021.frmLogin.resources
+C:\Users\julia\source\repos\Loteria_2021\Loteria_2021\obj\Debug\Loteria_2021.frmPrincipal.resources
+C:\Users\julia\source\repos\Loteria_2021\Loteria_2021\obj\Debug\Loteria_2021.frmUsuario.resources
