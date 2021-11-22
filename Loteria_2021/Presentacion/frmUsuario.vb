@@ -152,10 +152,10 @@
                         btnCerrar.Enabled = True
                         dataUsuario.Enabled = True
                     Else
-                        MessageBox.Show("El tipo de sorteo no se ha modificado. Vuelva a intentarlo.", "Confirmar registros", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        MessageBox.Show("El usuario no se ha modificado. Vuelva a intentarlo.", "Confirmar registros", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End If
                 Catch ex As Exception
-                    MessageBox.Show("Atención: se ha generado un error tratando de modificar el tipo de sorteo." &
+                    MessageBox.Show("Atención: se ha generado un error tratando de modificar el usuario." &
                                 Environment.NewLine & "Descripción del error: " & Environment.NewLine & ex.Message, "Error",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End Try
@@ -227,6 +227,4 @@
             End Try
         End If
     End Sub
-
-
 End Class

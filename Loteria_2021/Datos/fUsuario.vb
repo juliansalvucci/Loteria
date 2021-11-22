@@ -71,6 +71,7 @@ Public Class fUsuario
             cmd = New SqlCommand("INSERTAR_Usuarios")
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Connection = CNN
+
             cmd.Parameters.AddWithValue("@NombreUsu", dts.pNombreUsu)
             cmd.Parameters.AddWithValue("@Login", dts.pLogin)
             cmd.Parameters.AddWithValue("@Password", dts.pPassword)
@@ -95,9 +96,12 @@ Public Class fUsuario
             cmd = New SqlCommand("EDITAR_Usuarios")
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Connection = CNN
+
+            cmd.Parameters.AddWithValue("@ID", dts.pID)
             cmd.Parameters.AddWithValue("@NombreUsu", dts.pNombreUsu)
             cmd.Parameters.AddWithValue("@Login", dts.pLogin)
             cmd.Parameters.AddWithValue("@Password", dts.pPassword)
+            cmd.Parameters.AddWithValue("@Habilitado", dts.pHabilitado)
             If cmd.ExecuteNonQuery Then
                 Return True
             Else

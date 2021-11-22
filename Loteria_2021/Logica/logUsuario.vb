@@ -1,7 +1,7 @@
 ﻿Public Class logUsuario
     Dim ID As Integer
     Dim NombreUsu, Login, Password As String
-    Dim Habilitado As Byte
+    Dim Habilitado As Int16
     Public Property pID 'pID: ID  de propiedad.
         Get
             Return ID
