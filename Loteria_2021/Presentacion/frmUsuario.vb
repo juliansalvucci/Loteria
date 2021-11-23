@@ -49,7 +49,11 @@
             If cboBuscar.SelectedItem = "nombre" Then
                 dv.RowFilter = cboBuscar.Text & " like '%" & txtBuscar.Text & "%'"
             Else
-                dv.RowFilter = cboBuscar.Text & " = " & txtBuscar.Text
+                '--Si lo ingresado en la caja de texto es un numero entonces
+                If IsNumeric(txtBuscar.Text) Then
+                    '--Se realizara una busqueda por filtrando por el campo codigo en el campo codigo el mismo numero que txtBuscar.Text
+                    dv.RowFilter = cboBuscar.Text & " = " & txtBuscar.Text
+                End If
             End If
             If dv.Count <> 0 Then
                 dataUsuario.DataSource = dv
@@ -74,11 +78,10 @@
     End Sub
 
     Private Sub btnagregar_click(sender As Object, e As EventArgs) Handles btnAgregar.Click
-        If btnAgregar.Text = "agregar" Then
-            modopantalla = modFuncionesForm.ModoPantalla.ModoALTA
+        If btnAgregar.Text = "Agregar" Then
 
-            LimpiarTextos(Me)
-            HabilitarTextos(Me)
+            modFuncionesForm.LimpiarTextos(Me)
+            modFuncionesForm.HabilitarTextos(Me)
             btnEliminar.Enabled = False
             btnBuscar.Enabled = False
             btnCerrar.Enabled = False
@@ -191,7 +194,7 @@
         End If
     End Sub
 
-    Private Sub dataUsuario_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dataUsuario.CellContentClick
+    Private Sub dataUsuario_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dataUsuario.CellClick
         Dim aux As New Integer
         txtID.Text = dataUsuario.CurrentRow.Cells("ID").Value
         txtNombre.Text = dataUsuario.CurrentRow.Cells("Empleado").Value

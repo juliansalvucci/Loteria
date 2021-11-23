@@ -75,6 +75,7 @@ Public Class fUsuario
             cmd.Parameters.AddWithValue("@NombreUsu", dts.pNombreUsu)
             cmd.Parameters.AddWithValue("@Login", dts.pLogin)
             cmd.Parameters.AddWithValue("@Password", dts.pPassword)
+            cmd.Parameters.AddWithValue("@Habilitado", dts.pHabilitado)
             If cmd.ExecuteNonQuery Then
                 Return True
             Else
