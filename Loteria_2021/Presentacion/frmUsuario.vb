@@ -30,6 +30,7 @@
             cboBuscar.Enabled = False
             txtBuscar.Enabled = False
             btnAgregar.Enabled = True
+            CheckHabilitado.Enabled = False
             btnAgregar.Focus()
         Else
             btnModificar.Enabled = True
@@ -37,6 +38,7 @@
             btnBuscar.Enabled = True
             cboBuscar.Enabled = True : cboBuscar.SelectedIndex = 1
             txtBuscar.Enabled = True
+            CheckHabilitado.Enabled = False
             txtBuscar.Focus()
         End If
     End Sub
@@ -46,7 +48,7 @@
             Dim ds As New DataSet 'representa una memoria caché de datos en memoria.
             ds.Tables.Add(dt.Copy) 'se realiza una copia de la tabla en memoria.
             Dim dv As New DataView(ds.Tables(0))
-            If cboBuscar.SelectedItem = "nombre" Then
+            If cboBuscar.SelectedItem = "EMPLEADO" Then
                 dv.RowFilter = cboBuscar.Text & " like '%" & txtBuscar.Text & "%'"
             Else
                 '--Si lo ingresado en la caja de texto es un numero entonces
@@ -89,11 +91,11 @@
             txtBuscar.Enabled = False
             txtID.Enabled = False
             dataUsuario.Enabled = False
-            cboHabilitar.Enabled = True
+            CheckHabilitado.Enabled = True
             'el botón agregar pasa a ser confirmar.
             'el botón modificar pasa a ser cancelar.
-            btnAgregar.Text = "confirmar"
-            btnModificar.Text = "cancelar"
+            btnAgregar.Text = "Confirmar"
+            btnModificar.Text = "Cancelar"
             txtNombre.Focus()
         Else
 
@@ -109,12 +111,30 @@
                 Try
                     Dim dts As New logUsuario
                     Dim FuncionInsertar As New fUsuario
+                    Dim habilitado As Integer
+                    Dim pass As String
+
+
+                    If txtPassValidator.Text = txtPassword.Text Then
+                        pass = txtPassword.Text
+                    Else
+                        pass = Nothing
+                        If pass = Nothing Then
+                            MessageBox.Show("Contraseñas incorrectas", "Confirmar registros", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        End If
+                    End If
+
+
+                    If CheckHabilitado.Checked = True Then
+                        habilitado = 1
+                    Else
+                        habilitado = 0
+                    End If
 
                     dts.pNombreUsu = txtNombre.Text
                     dts.pLogin = txtLogin.Text
-                    dts.pPassword = txtPassword.Text
-                    dts.pPassword = txtPassValidator.Text
-                    dts.pHabilitado = cboHabilitar.SelectedItem
+                    dts.pPassword = pass
+                    dts.pHabilitado = habilitado
 
                     If FuncionInsertar.Alta_Usuario(dts) Then
                         mostrar_datos()
@@ -137,14 +157,29 @@
                 Try
                     Dim dts As New logUsuario
                     Dim FuncionInsertar As New fUsuario
+                    Dim habilitado As Integer
+                    Dim pass As String
+
+                    If txtPassValidator.Text = txtPassword.Text Then
+                        pass = txtPassword.Text
+                    Else
+                        pass = Nothing
+                        If pass = Nothing Then
+                            MessageBox.Show("Contraseñas incorrectas", "Confirmar registros", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        End If
+                    End If
+
+                    If CheckHabilitado.Checked = True Then
+                        habilitado = 1
+                    Else
+                        habilitado = 0
+                    End If
 
                     dts.pID = txtID.Text
                     dts.pNombreUsu = txtNombre.Text
                     dts.pLogin = txtLogin.Text
-                    dts.pPassword = txtPassword.Text
-                    dts.pPassword = txtPassValidator.Text
-                    dts.pHabilitado = cboHabilitar.SelectedItem
-
+                    dts.pPassword = pass
+                    dts.pHabilitado = habilitado
                     If FuncionInsertar.Modificar_Usuario(dts) Then
                         mostrar_datos()
                         LimpiarTextos(Me)
@@ -184,7 +219,7 @@
             btnBuscar.Enabled = False
             btnCerrar.Enabled = False
             cboBuscar.Enabled = False
-            cboHabilitar.Enabled = True
+            CheckHabilitado.Enabled = True
             txtBuscar.Enabled = False
             txtID.Enabled = False
             dataUsuario.Enabled = False
@@ -201,9 +236,9 @@
         txtLogin.Text = dataUsuario.CurrentRow.Cells("Login").Value
         aux = dataUsuario.CurrentRow.Cells("Habilitado").Value
         If aux = 1 Then
-            cboHabilitar.Text = "Si"
+            CheckHabilitado.Checked = True
         Else
-            cboHabilitar.Text = "No"
+            CheckHabilitado.Checked = False
         End If
         btnModificar.Enabled = True
         btnEliminar.Enabled = True

@@ -26,13 +26,11 @@ Partial Class frmUsuario
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.cboHabilitar = New System.Windows.Forms.ComboBox()
         Me.txtPassValidator = New System.Windows.Forms.TextBox()
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.txtLogin = New System.Windows.Forms.TextBox()
@@ -49,6 +47,7 @@ Partial Class frmUsuario
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.ErrProvUsuario = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.CheckHabilitado = New System.Windows.Forms.CheckBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -81,13 +80,12 @@ Partial Class frmUsuario
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.Label7)
+        Me.GroupBox2.Controls.Add(Me.CheckHabilitado)
         Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Controls.Add(Me.Label2)
-        Me.GroupBox2.Controls.Add(Me.cboHabilitar)
         Me.GroupBox2.Controls.Add(Me.txtPassValidator)
         Me.GroupBox2.Controls.Add(Me.txtPassword)
         Me.GroupBox2.Controls.Add(Me.txtLogin)
@@ -98,16 +96,6 @@ Partial Class frmUsuario
         Me.GroupBox2.Size = New System.Drawing.Size(382, 151)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(196, 78)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(60, 14)
-        Me.Label7.TabIndex = 11
-        Me.Label7.Text = "Habilitado"
         '
         'Label6
         '
@@ -158,15 +146,6 @@ Partial Class frmUsuario
         Me.Label2.Size = New System.Drawing.Size(17, 14)
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "ID"
-        '
-        'cboHabilitar
-        '
-        Me.cboHabilitar.FormattingEnabled = True
-        Me.cboHabilitar.Items.AddRange(New Object() {"1", "0"})
-        Me.cboHabilitar.Location = New System.Drawing.Point(262, 78)
-        Me.cboHabilitar.Name = "cboHabilitar"
-        Me.cboHabilitar.Size = New System.Drawing.Size(100, 21)
-        Me.cboHabilitar.TabIndex = 5
         '
         'txtPassValidator
         '
@@ -304,6 +283,18 @@ Partial Class frmUsuario
         '
         Me.ErrProvUsuario.ContainerControl = Me
         '
+        'CheckHabilitado
+        '
+        Me.CheckHabilitado.AutoSize = True
+        Me.CheckHabilitado.Checked = True
+        Me.CheckHabilitado.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckHabilitado.Location = New System.Drawing.Point(281, 77)
+        Me.CheckHabilitado.Name = "CheckHabilitado"
+        Me.CheckHabilitado.Size = New System.Drawing.Size(73, 17)
+        Me.CheckHabilitado.TabIndex = 12
+        Me.CheckHabilitado.Text = "Habilitado"
+        Me.CheckHabilitado.UseVisualStyleBackColor = True
+        '
         'frmUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -347,12 +338,11 @@ Partial Class frmUsuario
     Friend WithEvents btnBuscar As Button
     Friend WithEvents btnCerrar As Button
     Friend WithEvents ErrProvUsuario As ErrorProvider
-    Friend WithEvents cboHabilitar As ComboBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents CheckHabilitado As CheckBox
 End Class
