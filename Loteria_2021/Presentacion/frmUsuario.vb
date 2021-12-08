@@ -33,8 +33,8 @@
             CheckHabilitado.Enabled = False
             btnAgregar.Focus()
         Else
-            btnModificar.Enabled = True
-            btnEliminar.Enabled = True
+            btnModificar.Enabled = False
+            btnEliminar.Enabled = False
             btnBuscar.Enabled = True
             cboBuscar.Enabled = True : cboBuscar.SelectedIndex = 1
             txtBuscar.Enabled = True
@@ -48,7 +48,9 @@
             Dim ds As New DataSet 'representa una memoria caché de datos en memoria.
             ds.Tables.Add(dt.Copy) 'se realiza una copia de la tabla en memoria.
             Dim dv As New DataView(ds.Tables(0))
-            If cboBuscar.SelectedItem = "EMPLEADO" Then
+            If cboBuscar.SelectedItem = "USUARIO" Then
+                dv.RowFilter = cboBuscar.Text & " like '%" & txtBuscar.Text & "%'"
+            ElseIf cboBuscar.SelectedItem = "LOGIN" Then
                 dv.RowFilter = cboBuscar.Text & " like '%" & txtBuscar.Text & "%'"
             Else
                 '--Si lo ingresado en la caja de texto es un numero entonces
@@ -87,9 +89,11 @@
             btnEliminar.Enabled = False
             btnBuscar.Enabled = False
             btnCerrar.Enabled = False
+            btnModificar.Enabled = True
             cboBuscar.Enabled = False
             txtBuscar.Enabled = False
             txtID.Enabled = False
+            txtID.Text = "0"
             dataUsuario.Enabled = False
             CheckHabilitado.Enabled = True
             'el botón agregar pasa a ser confirmar.
@@ -180,6 +184,7 @@
                     dts.pLogin = txtLogin.Text
                     dts.pPassword = pass
                     dts.pHabilitado = habilitado
+
                     If FuncionInsertar.Modificar_Usuario(dts) Then
                         mostrar_datos()
                         LimpiarTextos(Me)
@@ -207,6 +212,7 @@
         If btnModificar.Text = "Cancelar" Then
             modopantalla = modFuncionesForm.ModoPantalla.ModoCONSULTA
             inicia_pantalla()
+            LimpiarTextos(Me)
             btnAgregar.Text = "Agregar"
             btnModificar.Text = "Modificar"
             btnCerrar.Enabled = True
@@ -219,9 +225,11 @@
             btnBuscar.Enabled = False
             btnCerrar.Enabled = False
             cboBuscar.Enabled = False
+            btnAgregar.Enabled = True
             CheckHabilitado.Enabled = True
             txtBuscar.Enabled = False
             txtID.Enabled = False
+            txtLogin.Enabled = False
             dataUsuario.Enabled = False
             btnAgregar.Text = "Confirmar"
             btnModificar.Text = "Cancelar"
@@ -232,7 +240,7 @@
     Private Sub dataUsuario_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dataUsuario.CellClick
         Dim aux As New Integer
         txtID.Text = dataUsuario.CurrentRow.Cells("ID").Value
-        txtNombre.Text = dataUsuario.CurrentRow.Cells("Empleado").Value
+        txtNombre.Text = dataUsuario.CurrentRow.Cells("Usuario").Value
         txtLogin.Text = dataUsuario.CurrentRow.Cells("Login").Value
         aux = dataUsuario.CurrentRow.Cells("Habilitado").Value
         If aux = 1 Then
@@ -242,6 +250,11 @@
         End If
         btnModificar.Enabled = True
         btnEliminar.Enabled = True
+        btnAgregar.Enabled = False
+        txtPassword.Hide()
+        txtPassValidator.Hide()
+        LabelPass.Hide()
+        LabelPassValidator.Hide()
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click

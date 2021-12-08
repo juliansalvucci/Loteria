@@ -26,8 +26,9 @@ Partial Class frmUsuario
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.CheckHabilitado = New System.Windows.Forms.CheckBox()
+        Me.LabelPassValidator = New System.Windows.Forms.Label()
+        Me.LabelPass = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -47,7 +48,6 @@ Partial Class frmUsuario
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.ErrProvUsuario = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.CheckHabilitado = New System.Windows.Forms.CheckBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -81,8 +81,8 @@ Partial Class frmUsuario
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.CheckHabilitado)
-        Me.GroupBox2.Controls.Add(Me.Label6)
-        Me.GroupBox2.Controls.Add(Me.Label5)
+        Me.GroupBox2.Controls.Add(Me.LabelPassValidator)
+        Me.GroupBox2.Controls.Add(Me.LabelPass)
         Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Controls.Add(Me.Label2)
@@ -97,25 +97,37 @@ Partial Class frmUsuario
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         '
-        'Label6
+        'CheckHabilitado
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(175, 51)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(82, 14)
-        Me.Label6.TabIndex = 10
-        Me.Label6.Text = "PassValidator"
+        Me.CheckHabilitado.AutoSize = True
+        Me.CheckHabilitado.Checked = True
+        Me.CheckHabilitado.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckHabilitado.Location = New System.Drawing.Point(281, 77)
+        Me.CheckHabilitado.Name = "CheckHabilitado"
+        Me.CheckHabilitado.Size = New System.Drawing.Size(73, 17)
+        Me.CheckHabilitado.TabIndex = 12
+        Me.CheckHabilitado.Text = "Habilitado"
+        Me.CheckHabilitado.UseVisualStyleBackColor = True
         '
-        'Label5
+        'LabelPassValidator
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(194, 25)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(63, 14)
-        Me.Label5.TabIndex = 9
-        Me.Label5.Text = "Password"
+        Me.LabelPassValidator.AutoSize = True
+        Me.LabelPassValidator.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelPassValidator.Location = New System.Drawing.Point(175, 51)
+        Me.LabelPassValidator.Name = "LabelPassValidator"
+        Me.LabelPassValidator.Size = New System.Drawing.Size(82, 14)
+        Me.LabelPassValidator.TabIndex = 10
+        Me.LabelPassValidator.Text = "PassValidator"
+        '
+        'LabelPass
+        '
+        Me.LabelPass.AutoSize = True
+        Me.LabelPass.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelPass.Location = New System.Drawing.Point(194, 25)
+        Me.LabelPass.Name = "LabelPass"
+        Me.LabelPass.Size = New System.Drawing.Size(63, 14)
+        Me.LabelPass.TabIndex = 9
+        Me.LabelPass.Text = "Password"
         '
         'Label4
         '
@@ -253,7 +265,7 @@ Partial Class frmUsuario
         'cboBuscar
         '
         Me.cboBuscar.FormattingEnabled = True
-        Me.cboBuscar.Items.AddRange(New Object() {"ID", "EMPLEADO"})
+        Me.cboBuscar.Items.AddRange(New Object() {"ID", "USUARIO", "LOGIN"})
         Me.cboBuscar.Location = New System.Drawing.Point(13, 20)
         Me.cboBuscar.Name = "cboBuscar"
         Me.cboBuscar.Size = New System.Drawing.Size(121, 21)
@@ -282,18 +294,6 @@ Partial Class frmUsuario
         'ErrProvUsuario
         '
         Me.ErrProvUsuario.ContainerControl = Me
-        '
-        'CheckHabilitado
-        '
-        Me.CheckHabilitado.AutoSize = True
-        Me.CheckHabilitado.Checked = True
-        Me.CheckHabilitado.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckHabilitado.Location = New System.Drawing.Point(281, 77)
-        Me.CheckHabilitado.Name = "CheckHabilitado"
-        Me.CheckHabilitado.Size = New System.Drawing.Size(73, 17)
-        Me.CheckHabilitado.TabIndex = 12
-        Me.CheckHabilitado.Text = "Habilitado"
-        Me.CheckHabilitado.UseVisualStyleBackColor = True
         '
         'frmUsuario
         '
@@ -339,8 +339,8 @@ Partial Class frmUsuario
     Friend WithEvents btnCerrar As Button
     Friend WithEvents ErrProvUsuario As ErrorProvider
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
+    Friend WithEvents LabelPassValidator As Label
+    Friend WithEvents LabelPass As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
