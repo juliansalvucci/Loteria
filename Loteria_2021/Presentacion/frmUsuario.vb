@@ -239,6 +239,7 @@
 
     Private Sub dataUsuario_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dataUsuario.CellClick
         Dim aux As New Integer
+        dataUsuario.ReadOnly = True
         txtID.Text = dataUsuario.CurrentRow.Cells("ID").Value
         txtNombre.Text = dataUsuario.CurrentRow.Cells("Usuario").Value
         txtLogin.Text = dataUsuario.CurrentRow.Cells("Login").Value
@@ -250,11 +251,8 @@
         End If
         btnModificar.Enabled = True
         btnEliminar.Enabled = True
-        btnAgregar.Enabled = False
-        txtPassword.Hide()
-        txtPassValidator.Hide()
-        LabelPass.Hide()
-        LabelPassValidator.Hide()
+        btnAgregar.Enabled = True
+
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click

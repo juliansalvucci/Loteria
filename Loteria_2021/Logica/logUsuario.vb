@@ -2,12 +2,23 @@
     Dim ID As Integer
     Dim NombreUsu, Login, Password As String
     Dim Habilitado As Int16
+    Dim Fecha As Date
+
     Public Property pID 'pID: ID  de propiedad.
         Get
             Return ID
         End Get
         Set(value)
             ID = value
+        End Set
+    End Property
+
+    Public Property pFecha 'pID: ID  de propiedad.
+        Get
+            Return Fecha
+        End Get
+        Set(value)
+            Fecha = value
         End Set
     End Property
     Public Property pNombreUsu
@@ -46,8 +57,9 @@
     Public Sub New()
     End Sub
 
-    Public Sub New(ByVal ID As Integer, ByVal NombreUsu As String, ByVal Login As String, ByVal Password As String, ByVal Habilitado As Byte)
+    Public Sub New(ByVal ID As Integer, ByVal Fecha As Date, ByVal NombreUsu As String, ByVal Login As String, ByVal Password As String, ByVal Habilitado As Byte)
         pID = ID
+        pFecha = Fecha
         pNombreUsu = NombreUsu
         pLogin = Login
         pPassword = Password

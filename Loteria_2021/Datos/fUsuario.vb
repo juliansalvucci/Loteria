@@ -72,6 +72,8 @@ Public Class fUsuario
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Connection = CNN
 
+
+            cmd.Parameters.AddWithValue("@Fecha", DateTime.Today)
             cmd.Parameters.AddWithValue("@NombreUsu", dts.pNombreUsu)
             cmd.Parameters.AddWithValue("@Login", dts.pLogin)
             cmd.Parameters.AddWithValue("@Password", dts.pPassword)
