@@ -84,6 +84,7 @@
     Private Sub btnagregar_click(sender As Object, e As EventArgs) Handles btnAgregar.Click
         If btnAgregar.Text = "Agregar" Then
 
+            modopantalla = modFuncionesForm.ModoPantalla.ModoALTA
             modFuncionesForm.LimpiarTextos(Me)
             modFuncionesForm.HabilitarTextos(Me)
             btnEliminar.Enabled = False
@@ -96,6 +97,7 @@
             txtID.Text = "0"
             dataUsuario.Enabled = False
             CheckHabilitado.Enabled = True
+            CheckHabilitado.Checked = False
             'el botón agregar pasa a ser confirmar.
             'el botón modificar pasa a ser cancelar.
             btnAgregar.Text = "Confirmar"
@@ -142,7 +144,7 @@
 
                     If FuncionInsertar.Alta_Usuario(dts) Then
                         mostrar_datos()
-                        LimpiarTextos(Me)
+                        modFuncionesForm.LimpiarTextos(Me)
                         inicia_pantalla()
 
                         btnAgregar.Text = "Agregar"
@@ -187,13 +189,15 @@
 
                     If FuncionInsertar.Modificar_Usuario(dts) Then
                         mostrar_datos()
-                        LimpiarTextos(Me)
+                        modFuncionesForm.LimpiarTextos(Me)
                         inicia_pantalla()
 
                         btnAgregar.Text = "Agregar"
                         btnModificar.Text = "Modificar"
                         btnCerrar.Enabled = True
                         dataUsuario.Enabled = True
+                        txtID.Text = "0"
+                        CheckHabilitado.Checked = False
                     Else
                         MessageBox.Show("El usuario no se ha modificado. Vuelva a intentarlo.", "Confirmar registros", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End If
@@ -212,7 +216,6 @@
         If btnModificar.Text = "Cancelar" Then
             modopantalla = modFuncionesForm.ModoPantalla.ModoCONSULTA
             inicia_pantalla()
-            LimpiarTextos(Me)
             btnAgregar.Text = "Agregar"
             btnModificar.Text = "Modificar"
             btnCerrar.Enabled = True
@@ -220,7 +223,7 @@
             ErrProvUsuario.SetError(txtNombre, "")
         Else
             modopantalla = ModoPantalla.ModoMODIFICACION
-            HabilitarTextos(Me)
+            modFuncionesForm.HabilitarTextos(Me)
             btnEliminar.Enabled = False
             btnBuscar.Enabled = False
             btnCerrar.Enabled = False
@@ -240,10 +243,15 @@
     Private Sub dataUsuario_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dataUsuario.CellClick
         Dim aux As New Integer
         dataUsuario.ReadOnly = True
-        txtID.Text = dataUsuario.CurrentRow.Cells("ID").Value
-        txtNombre.Text = dataUsuario.CurrentRow.Cells("Usuario").Value
-        txtLogin.Text = dataUsuario.CurrentRow.Cells("Login").Value
-        aux = dataUsuario.CurrentRow.Cells("Habilitado").Value
+        txtID.Text = Convert.ToString(dataUsuario.CurrentRow.Cells("ID").Value)
+        txtNombre.Text = Convert.ToString(dataUsuario.CurrentRow.Cells("Usuario").Value)
+        txtLogin.Text = Convert.ToString(dataUsuario.CurrentRow.Cells("Login").Value)
+
+        If txtID.Text <> "" Then
+            aux = dataUsuario.CurrentRow.Cells("Habilitado").Value
+        End If
+
+
         If aux = 1 Then
             CheckHabilitado.Checked = True
         Else

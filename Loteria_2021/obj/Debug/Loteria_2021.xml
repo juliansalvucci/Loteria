@@ -8,18 +8,343 @@ Loteria_2021
 <members>
 <member name="T:Loteria_2021.My.Resources.Resources">
 <summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
 </summary>
 </member>
 <member name="P:Loteria_2021.My.Resources.Resources.ResourceManager">
 <summary>
-  Returns the cached ResourceManager instance used by this class.
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
 </summary>
 </member>
 <member name="P:Loteria_2021.My.Resources.Resources.Culture">
 <summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member>
+<member name="P:Loteria_2021.My.Resources.Resources.Agregar">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Loteria_2021.My.Resources.Resources.Agregar_Todo">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Loteria_2021.My.Resources.Resources.casino">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.AGENCIADataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.APUESTADataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.DETALLESORTEODataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.SORTEODataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.TIPOSORTEODataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.USUARIODataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.obtener_usuariosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.procMostrar_ApuestaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.procMostrar_ReporteApuestaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.procMostrar_SorteoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.procMostrar_TipoSorteoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.procMostrar_UsuariosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.Validar_UsuarioDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.AGENCIARow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.APUESTARow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.DETALLESORTEORow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.SORTEORow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.TIPOSORTEORow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.USUARIORow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.obtener_usuariosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.procMostrar_ApuestaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.procMostrar_ReporteApuestaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.procMostrar_SorteoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.procMostrar_TipoSorteoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.procMostrar_UsuariosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.Validar_UsuarioRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.AGENCIARowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.APUESTARowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.DETALLESORTEORowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.SORTEORowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.TIPOSORTEORowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.USUARIORowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.obtener_usuariosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.procMostrar_ApuestaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.procMostrar_ReporteApuestaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.procMostrar_SorteoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.procMostrar_TipoSorteoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.procMostrar_UsuariosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSet.Validar_UsuarioRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSetTableAdapters.AGENCIATableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSetTableAdapters.APUESTATableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSetTableAdapters.DETALLESORTEOTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSetTableAdapters.SORTEOTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSetTableAdapters.TIPOSORTEOTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSetTableAdapters.USUARIOTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSetTableAdapters.obtener_usuariosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSetTableAdapters.procMostrar_ApuestaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSetTableAdapters.procMostrar_ReporteApuestaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSetTableAdapters.procMostrar_SorteoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSetTableAdapters.procMostrar_TipoSorteoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSetTableAdapters.procMostrar_UsuariosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSetTableAdapters.Validar_UsuarioTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSetTableAdapters.QueriesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Loteria_2021.LoteriaDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(Loteria_2021.LoteriaDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Loteria_2021.LoteriaDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(Loteria_2021.LoteriaDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Loteria_2021.LoteriaDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(Loteria_2021.LoteriaDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Loteria_2021.LoteriaDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Loteria_2021.LoteriaDataSetTableAdapters.TableAdapterManager.UpdateAll(Loteria_2021.LoteriaDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Loteria_2021.LoteriaDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
 </summary>
 </member>
 </members>

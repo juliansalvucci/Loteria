@@ -31,7 +31,7 @@ Public Class fUsuario
 
         Try
             funcConectarDB()  'abrir conexión con base de datos'
-            cmd = New SqlCommand("procMostrar_Usuarios") 'procedimiento almacenado que consulta y muestra los tipos de sorteos y los ordena por nombre, se llama procMostrar_TipoSorteo' 
+            cmd = New SqlCommand("procMostrar_usuarios") 'procedimiento almacenado que consulta y muestra los tipos de sorteos y los ordena por nombre, se llama procMostrar_TipoSorteo' 
             cmd.CommandType = CommandType.StoredProcedure 'string que contiene el comando de la base de datos'
 
             cmd.Connection = CNN
