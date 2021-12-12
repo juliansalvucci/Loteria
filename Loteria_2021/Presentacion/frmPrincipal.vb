@@ -92,4 +92,8 @@ Public Class frmPrincipal
     Private Sub frmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub UsuariosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UsuariosToolStripMenuItem.Click
+        ReporteUsuarios.Show()
+    End Sub
 End Class

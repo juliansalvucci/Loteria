@@ -107,11 +107,32 @@
 
             'validamos los controles.
             If txtNombre.Text = "" Then
-                errprovusuario.seterror(txtNombre, "debe ingresar un nombre para el usuario")
+                ErrProvUsuario.SetError(txtNombre, "debe ingresar un nombre para el usuario")
                 txtNombre.Focus()
                 Exit Sub
             Else
                 errprovusuario.seterror(txtNombre, "")
+            End If
+            If txtLogin.Text = "" Then
+                ErrProvUsuario.SetError(txtLogin, "debe ingresar un login para el usuario")
+                txtLogin.Focus()
+                Exit Sub
+            Else
+                ErrProvUsuario.SetError(txtLogin, "")
+            End If
+            If txtPassword.Text = "" Then
+                ErrProvUsuario.SetError(txtPassword, "debe ingresar una contraseña para el usuario")
+                txtPassword.Focus()
+                Exit Sub
+            Else
+                ErrProvUsuario.SetError(txtPassword, "")
+            End If
+            If txtPassValidator.Text = "" Then
+                ErrProvUsuario.SetError(txtPassValidator, "debe validar la contraseña para el usuario")
+                txtPassValidator.Focus()
+                Exit Sub
+            Else
+                ErrProvUsuario.SetError(txtPassword, "")
             End If
             If modopantalla = modFuncionesForm.ModoPantalla.ModoALTA Then
                 Try
@@ -210,8 +231,6 @@
         End If
     End Sub
 
-
-
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
         If btnModificar.Text = "Cancelar" Then
             modopantalla = modFuncionesForm.ModoPantalla.ModoCONSULTA
@@ -232,7 +251,7 @@
             CheckHabilitado.Enabled = True
             txtBuscar.Enabled = False
             txtID.Enabled = False
-            txtLogin.Enabled = False
+            txtLogin.Enabled = True
             dataUsuario.Enabled = False
             btnAgregar.Text = "Confirmar"
             btnModificar.Text = "Cancelar"
@@ -246,6 +265,8 @@
         txtID.Text = Convert.ToString(dataUsuario.CurrentRow.Cells("ID").Value)
         txtNombre.Text = Convert.ToString(dataUsuario.CurrentRow.Cells("Usuario").Value)
         txtLogin.Text = Convert.ToString(dataUsuario.CurrentRow.Cells("Login").Value)
+        txtPassword.Text = Convert.ToString(dataUsuario.CurrentRow.Cells("Password").Value)
+        txtPassValidator.Text = Convert.ToString(dataUsuario.CurrentRow.Cells("Password").Value)
 
         If txtID.Text <> "" Then
             aux = dataUsuario.CurrentRow.Cells("Habilitado").Value
@@ -284,4 +305,6 @@
             End Try
         End If
     End Sub
+
+
 End Class

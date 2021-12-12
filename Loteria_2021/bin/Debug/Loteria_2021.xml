@@ -32,7 +32,37 @@ Loteria_2021
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Loteria_2021.My.Resources.Resources.Buscar">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Loteria_2021.My.Resources.Resources.casino">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Loteria_2021.My.Resources.Resources.Editar">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Loteria_2021.My.Resources.Resources.Eliminar">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Loteria_2021.My.Resources.Resources.Quitar_Todo">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Loteria_2021.My.Resources.Resources.Quitar_TodoD">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Loteria_2021.My.Resources.Resources.www">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>

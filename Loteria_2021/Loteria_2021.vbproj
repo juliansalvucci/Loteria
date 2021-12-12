@@ -151,6 +151,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\modFuncionesForm.vb" />
+    <Compile Include="Reportes\ReporteUsuarios.Designer.vb">
+      <DependentUpon>ReporteUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteUsuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -171,6 +177,10 @@
     <EmbeddedResource Include="Presentacion\frmUsuario.resx">
       <DependentUpon>frmUsuario.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteUsuarios.resx">
+      <DependentUpon>ReporteUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RUsuarios.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="LoteriaDataSet.xsc">
@@ -206,6 +216,12 @@
     <None Include="Resources\Agregar_Todo.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Quitar_TodoD.gif" />
+    <None Include="Resources\Quitar_Todo.gif" />
+    <None Include="Resources\www.gif" />
+    <None Include="Resources\Buscar.gif" />
+    <None Include="Resources\Editar.gif" />
+    <None Include="Resources\Eliminar.gif" />
     <Content Include="SqlServerTypes\Loader.cs" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
@@ -221,5 +237,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

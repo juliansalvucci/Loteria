@@ -23,6 +23,7 @@ Partial Class frmUsuario
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -40,6 +41,7 @@ Partial Class frmUsuario
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnModificar = New System.Windows.Forms.Button()
+        Me.btnAgregar = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.dataUsuario = New System.Windows.Forms.DataGridView()
         Me.txtBuscar = New System.Windows.Forms.TextBox()
@@ -47,13 +49,18 @@ Partial Class frmUsuario
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.ErrProvUsuario = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.btnAgregar = New System.Windows.Forms.Button()
+        Me.ErrorProvLogin = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ErrorProvPass = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ErrorProvPassV = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         CType(Me.dataUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrProvUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProvLogin, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProvPass, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProvPassV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -208,22 +215,41 @@ Partial Class frmUsuario
         'btnEliminar
         '
         Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEliminar.Location = New System.Drawing.Point(20, 97)
+        Me.btnEliminar.Image = Global.Loteria_2021.My.Resources.Resources.Eliminar
+        Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnEliminar.Location = New System.Drawing.Point(20, 107)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(75, 23)
+        Me.btnEliminar.Size = New System.Drawing.Size(89, 38)
         Me.btnEliminar.TabIndex = 2
         Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnEliminar.UseVisualStyleBackColor = True
         '
         'btnModificar
         '
         Me.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnModificar.Location = New System.Drawing.Point(20, 68)
+        Me.btnModificar.Image = Global.Loteria_2021.My.Resources.Resources.Editar
+        Me.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnModificar.Location = New System.Drawing.Point(20, 61)
         Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(75, 23)
+        Me.btnModificar.Size = New System.Drawing.Size(89, 40)
         Me.btnModificar.TabIndex = 1
         Me.btnModificar.Text = "Modificar"
+        Me.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnModificar.UseVisualStyleBackColor = True
+        '
+        'btnAgregar
+        '
+        Me.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAgregar.Image = Global.Loteria_2021.My.Resources.Resources.Agregar_Todo
+        Me.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnAgregar.Location = New System.Drawing.Point(20, 17)
+        Me.btnAgregar.Name = "btnAgregar"
+        Me.btnAgregar.Size = New System.Drawing.Size(89, 38)
+        Me.btnAgregar.TabIndex = 0
+        Me.btnAgregar.Text = "Agregar"
+        Me.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAgregar.UseVisualStyleBackColor = True
         '
         'GroupBox4
         '
@@ -239,6 +265,10 @@ Partial Class frmUsuario
         '
         'dataUsuario
         '
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.LightGray
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        Me.dataUsuario.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
         Me.dataUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dataUsuario.Location = New System.Drawing.Point(28, 54)
         Me.dataUsuario.Name = "dataUsuario"
@@ -254,8 +284,11 @@ Partial Class frmUsuario
         '
         'cboBuscar
         '
+        Me.cboBuscar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cboBuscar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cboBuscar.FormattingEnabled = True
-        Me.cboBuscar.Items.AddRange(New Object() {"ID", "USUARIO", "LOGIN"})
+        Me.ErrorProvLogin.SetIconAlignment(Me.cboBuscar, System.Windows.Forms.ErrorIconAlignment.TopLeft)
+        Me.cboBuscar.Items.AddRange(New Object() {"ID", "USUARIO", "LOGIN", "HABILITADO"})
         Me.cboBuscar.Location = New System.Drawing.Point(13, 20)
         Me.cboBuscar.Name = "cboBuscar"
         Me.cboBuscar.Size = New System.Drawing.Size(121, 21)
@@ -264,11 +297,14 @@ Partial Class frmUsuario
         'btnBuscar
         '
         Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBuscar.Image = Global.Loteria_2021.My.Resources.Resources.Buscar
+        Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnBuscar.Location = New System.Drawing.Point(408, 19)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
+        Me.btnBuscar.Size = New System.Drawing.Size(75, 29)
         Me.btnBuscar.TabIndex = 0
         Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnBuscar.UseVisualStyleBackColor = True
         '
         'btnCerrar
@@ -285,15 +321,17 @@ Partial Class frmUsuario
         '
         Me.ErrProvUsuario.ContainerControl = Me
         '
-        'btnAgregar
+        'ErrorProvLogin
         '
-        Me.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAgregar.Location = New System.Drawing.Point(20, 39)
-        Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
-        Me.btnAgregar.TabIndex = 0
-        Me.btnAgregar.Text = "Agregar"
-        Me.btnAgregar.UseVisualStyleBackColor = True
+        Me.ErrorProvLogin.ContainerControl = Me
+        '
+        'ErrorProvPass
+        '
+        Me.ErrorProvPass.ContainerControl = Me
+        '
+        'ErrorProvPassV
+        '
+        Me.ErrorProvPassV.ContainerControl = Me
         '
         'frmUsuario
         '
@@ -309,6 +347,7 @@ Partial Class frmUsuario
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmUsuario"
+        Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Text = "ABMC Usuarios"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -319,6 +358,9 @@ Partial Class frmUsuario
         Me.GroupBox4.PerformLayout()
         CType(Me.dataUsuario, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrProvUsuario, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProvLogin, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProvPass, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProvPassV, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -348,4 +390,7 @@ Partial Class frmUsuario
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents CheckHabilitado As CheckBox
+    Friend WithEvents ErrorProvLogin As ErrorProvider
+    Friend WithEvents ErrorProvPass As ErrorProvider
+    Friend WithEvents ErrorProvPassV As ErrorProvider
 End Class

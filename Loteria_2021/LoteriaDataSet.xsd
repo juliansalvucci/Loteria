@@ -364,7 +364,6 @@ SELECT FECHAALTA, ID, NOMBREUSU, LOGIN, PASSWORD, HABILITADO FROM USUARIO WHERE 
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="ID" DataSetColumn="ID" />
-              <Mapping SourceColumn="FECHA ALTA" DataSetColumn="FECHA ALTA" />
               <Mapping SourceColumn="USUARIO" DataSetColumn="USUARIO" />
               <Mapping SourceColumn="LOGIN" DataSetColumn="LOGIN" />
               <Mapping SourceColumn="HABILITADO" DataSetColumn="HABILITADO" />
@@ -815,7 +814,6 @@ SELECT FECHAALTA, ID, NOMBREUSU, LOGIN, PASSWORD, HABILITADO FROM USUARIO WHERE 
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
-              <xs:element name="FECHA_x0020_ALTA" msprop:Generator_ColumnVarNameInTable="columnFECHA_ALTA" msprop:Generator_ColumnPropNameInRow="FECHA_ALTA" msprop:Generator_ColumnPropNameInTable="FECHA_ALTAColumn" msprop:Generator_UserColumnName="FECHA ALTA" type="xs:dateTime" minOccurs="0" />
               <xs:element name="USUARIO" msprop:Generator_ColumnVarNameInTable="columnUSUARIO" msprop:Generator_ColumnPropNameInRow="USUARIO" msprop:Generator_ColumnPropNameInTable="USUARIOColumn" msprop:Generator_UserColumnName="USUARIO">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">

@@ -2583,8 +2583,6 @@ Partial Public Class LoteriaDataSet
         
         Private columnID As Global.System.Data.DataColumn
         
-        Private columnFECHA_ALTA As Global.System.Data.DataColumn
-        
         Private columnUSUARIO As Global.System.Data.DataColumn
         
         Private columnLOGIN As Global.System.Data.DataColumn
@@ -2631,14 +2629,6 @@ Partial Public Class LoteriaDataSet
         Public ReadOnly Property IDColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnID
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property FECHA_ALTAColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnFECHA_ALTA
             End Get
         End Property
         
@@ -2703,9 +2693,9 @@ Partial Public Class LoteriaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function Addobtener_usuariosRow(ByVal FECHA_ALTA As Date, ByVal USUARIO As String, ByVal LOGIN As String, ByVal HABILITADO As Integer) As obtener_usuariosRow
+        Public Overloads Function Addobtener_usuariosRow(ByVal USUARIO As String, ByVal LOGIN As String, ByVal HABILITADO As Integer) As obtener_usuariosRow
             Dim rowobtener_usuariosRow As obtener_usuariosRow = CType(Me.NewRow,obtener_usuariosRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, FECHA_ALTA, USUARIO, LOGIN, HABILITADO}
+            Dim columnValuesArray() As Object = New Object() {Nothing, USUARIO, LOGIN, HABILITADO}
             rowobtener_usuariosRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowobtener_usuariosRow)
             Return rowobtener_usuariosRow
@@ -2735,7 +2725,6 @@ Partial Public Class LoteriaDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub InitVars()
             Me.columnID = MyBase.Columns("ID")
-            Me.columnFECHA_ALTA = MyBase.Columns("FECHA ALTA")
             Me.columnUSUARIO = MyBase.Columns("USUARIO")
             Me.columnLOGIN = MyBase.Columns("LOGIN")
             Me.columnHABILITADO = MyBase.Columns("HABILITADO")
@@ -2746,8 +2735,6 @@ Partial Public Class LoteriaDataSet
         Private Sub InitClass()
             Me.columnID = New Global.System.Data.DataColumn("ID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnID)
-            Me.columnFECHA_ALTA = New Global.System.Data.DataColumn("FECHA ALTA", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnFECHA_ALTA)
             Me.columnUSUARIO = New Global.System.Data.DataColumn("USUARIO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnUSUARIO)
             Me.columnLOGIN = New Global.System.Data.DataColumn("LOGIN", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -5151,21 +5138,6 @@ Partial Public Class LoteriaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property FECHA_ALTA() As Date
-            Get
-                Try 
-                    Return CType(Me(Me.tableobtener_usuarios.FECHA_ALTAColumn),Date)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'FECHA ALTA' de la tabla 'obtener_usuarios' es DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableobtener_usuarios.FECHA_ALTAColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property USUARIO() As String
             Get
                 Return CType(Me(Me.tableobtener_usuarios.USUARIOColumn),String)
@@ -5196,18 +5168,6 @@ Partial Public Class LoteriaDataSet
                 Me(Me.tableobtener_usuarios.HABILITADOColumn) = value
             End Set
         End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IsFECHA_ALTANull() As Boolean
-            Return Me.IsNull(Me.tableobtener_usuarios.FECHA_ALTAColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetFECHA_ALTANull()
-            Me(Me.tableobtener_usuarios.FECHA_ALTAColumn) = Global.System.Convert.DBNull
-        End Sub
     End Class
     
     '''<summary>
@@ -8197,7 +8157,6 @@ Namespace LoteriaDataSetTableAdapters
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "obtener_usuarios"
             tableMapping.ColumnMappings.Add("ID", "ID")
-            tableMapping.ColumnMappings.Add("FECHA ALTA", "FECHA ALTA")
             tableMapping.ColumnMappings.Add("USUARIO", "USUARIO")
             tableMapping.ColumnMappings.Add("LOGIN", "LOGIN")
             tableMapping.ColumnMappings.Add("HABILITADO", "HABILITADO")

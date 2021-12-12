@@ -72,3 +72,6 @@ C:\Users\julia\source\repos\Loteria_2021\Loteria_2021\bin\Debug\ru\Microsoft.Rep
 C:\Users\julia\source\repos\Loteria_2021\Loteria_2021\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\julia\source\repos\Loteria_2021\Loteria_2021\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\julia\source\repos\Loteria_2021\Loteria_2021\obj\Debug\Loteria_2021.vbproj.CopyComplete
+C:\Users\julia\source\repos\Loteria_2021\Loteria_2021\obj\Debug\RdlCompile.cache
+C:\Users\julia\source\repos\Loteria_2021\Loteria_2021\obj\Debug\RdlCompile.compiled
+C:\Users\julia\source\repos\Loteria_2021\Loteria_2021\obj\Debug\Loteria_2021.ReporteUsuarios.resources
