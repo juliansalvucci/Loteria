@@ -23,7 +23,7 @@ Partial Class frmUsuario
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -170,6 +170,7 @@ Partial Class frmUsuario
         '
         Me.txtPassValidator.Location = New System.Drawing.Point(262, 22)
         Me.txtPassValidator.Name = "txtPassValidator"
+        Me.txtPassValidator.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtPassValidator.Size = New System.Drawing.Size(100, 20)
         Me.txtPassValidator.TabIndex = 4
         '
@@ -177,6 +178,7 @@ Partial Class frmUsuario
         '
         Me.txtPassword.Location = New System.Drawing.Point(262, 48)
         Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtPassword.Size = New System.Drawing.Size(100, 20)
         Me.txtPassword.TabIndex = 3
         '
@@ -184,6 +186,7 @@ Partial Class frmUsuario
         '
         Me.txtLogin.Location = New System.Drawing.Point(58, 78)
         Me.txtLogin.Name = "txtLogin"
+        Me.txtLogin.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtLogin.Size = New System.Drawing.Size(100, 20)
         Me.txtLogin.TabIndex = 2
         '
@@ -191,6 +194,7 @@ Partial Class frmUsuario
         '
         Me.txtNombre.Location = New System.Drawing.Point(58, 48)
         Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtNombre.Size = New System.Drawing.Size(100, 20)
         Me.txtNombre.TabIndex = 1
         '
@@ -198,6 +202,7 @@ Partial Class frmUsuario
         '
         Me.txtID.Location = New System.Drawing.Point(58, 19)
         Me.txtID.Name = "txtID"
+        Me.txtID.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtID.Size = New System.Drawing.Size(48, 20)
         Me.txtID.TabIndex = 0
         '
@@ -219,6 +224,7 @@ Partial Class frmUsuario
         Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnEliminar.Location = New System.Drawing.Point(20, 107)
         Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.btnEliminar.Size = New System.Drawing.Size(89, 38)
         Me.btnEliminar.TabIndex = 2
         Me.btnEliminar.Text = "Eliminar"
@@ -232,6 +238,7 @@ Partial Class frmUsuario
         Me.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnModificar.Location = New System.Drawing.Point(20, 61)
         Me.btnModificar.Name = "btnModificar"
+        Me.btnModificar.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.btnModificar.Size = New System.Drawing.Size(89, 40)
         Me.btnModificar.TabIndex = 1
         Me.btnModificar.Text = "Modificar"
@@ -245,6 +252,7 @@ Partial Class frmUsuario
         Me.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnAgregar.Location = New System.Drawing.Point(20, 17)
         Me.btnAgregar.Name = "btnAgregar"
+        Me.btnAgregar.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.btnAgregar.Size = New System.Drawing.Size(89, 38)
         Me.btnAgregar.TabIndex = 0
         Me.btnAgregar.Text = "Agregar"
@@ -253,6 +261,7 @@ Partial Class frmUsuario
         '
         'GroupBox4
         '
+        Me.GroupBox4.CausesValidation = False
         Me.GroupBox4.Controls.Add(Me.dataUsuario)
         Me.GroupBox4.Controls.Add(Me.txtBuscar)
         Me.GroupBox4.Controls.Add(Me.cboBuscar)
@@ -265,13 +274,14 @@ Partial Class frmUsuario
         '
         'dataUsuario
         '
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.LightGray
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        Me.dataUsuario.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        Me.dataUsuario.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dataUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dataUsuario.Location = New System.Drawing.Point(28, 54)
         Me.dataUsuario.Name = "dataUsuario"
+        Me.dataUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.dataUsuario.Size = New System.Drawing.Size(443, 125)
         Me.dataUsuario.TabIndex = 6
         '
@@ -279,6 +289,7 @@ Partial Class frmUsuario
         '
         Me.txtBuscar.Location = New System.Drawing.Point(140, 21)
         Me.txtBuscar.Name = "txtBuscar"
+        Me.txtBuscar.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtBuscar.Size = New System.Drawing.Size(242, 20)
         Me.txtBuscar.TabIndex = 5
         '
@@ -291,6 +302,7 @@ Partial Class frmUsuario
         Me.cboBuscar.Items.AddRange(New Object() {"ID", "USUARIO", "LOGIN", "HABILITADO"})
         Me.cboBuscar.Location = New System.Drawing.Point(13, 20)
         Me.cboBuscar.Name = "cboBuscar"
+        Me.cboBuscar.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.cboBuscar.Size = New System.Drawing.Size(121, 21)
         Me.cboBuscar.TabIndex = 1
         '
@@ -301,6 +313,7 @@ Partial Class frmUsuario
         Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnBuscar.Location = New System.Drawing.Point(408, 19)
         Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.btnBuscar.Size = New System.Drawing.Size(75, 29)
         Me.btnBuscar.TabIndex = 0
         Me.btnBuscar.Text = "Buscar"
@@ -347,7 +360,7 @@ Partial Class frmUsuario
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmUsuario"
-        Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Text = "ABMC Usuarios"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
