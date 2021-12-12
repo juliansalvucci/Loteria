@@ -35,7 +35,6 @@ Public Class frmPrincipal
         End If
     End Sub
 
-
     Private Sub ExitToolsStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
 
     End Sub
@@ -48,13 +47,9 @@ Public Class frmPrincipal
         ' Utilice My.Computer.Clipboard para insertar el texto o las imágenes seleccionadas en el Portapapeles
     End Sub
 
-    Private Sub PasteToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) 
+    Private Sub PasteToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
         'Utilice My.Computer.Clipboard.GetText() o My.Computer.Clipboard.GetData para recuperar la información del Portapapeles.
     End Sub
-
-
-
-
 
     Private Sub CascadeToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) 
         Me.LayoutMdi(MdiLayout.Cascade)
@@ -82,11 +77,7 @@ Public Class frmPrincipal
     Private m_ChildFormNumber As Integer
 
     Private Sub ABMCTipoSorteoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ABMCTipoSorteoToolStripMenuItem.Click
-        frmTipoSorteo.Show()
-    End Sub
 
-    Private Sub UsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UsuarioToolStripMenuItem.Click
-        frmUsuario.Show()
     End Sub
 
     Private Sub frmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -95,5 +86,9 @@ Public Class frmPrincipal
 
     Private Sub UsuariosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UsuariosToolStripMenuItem.Click
         ReporteUsuarios.Show()
+    End Sub
+
+    Private Sub UsuarioToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles UsuarioToolStripMenuItem1.Click
+        frmUsuario.Show()
     End Sub
 End Class

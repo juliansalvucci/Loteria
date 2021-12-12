@@ -27,19 +27,20 @@ Partial Class frmPrincipal
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPrincipal))
         Me.MenuStrip = New System.Windows.Forms.MenuStrip()
         Me.ABMCTipoSorteoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.TipoSorteroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UsuarioToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip
         '
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ABMCTipoSorteoToolStripMenuItem, Me.UsuarioToolStripMenuItem, Me.ReportesToolStripMenuItem})
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ABMCTipoSorteoToolStripMenuItem, Me.ReportesToolStripMenuItem})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.Name = "MenuStrip"
         Me.MenuStrip.Size = New System.Drawing.Size(632, 24)
@@ -48,15 +49,10 @@ Partial Class frmPrincipal
         '
         'ABMCTipoSorteoToolStripMenuItem
         '
+        Me.ABMCTipoSorteoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TipoSorteroToolStripMenuItem, Me.UsuarioToolStripMenuItem1})
         Me.ABMCTipoSorteoToolStripMenuItem.Name = "ABMCTipoSorteoToolStripMenuItem"
-        Me.ABMCTipoSorteoToolStripMenuItem.Size = New System.Drawing.Size(113, 20)
-        Me.ABMCTipoSorteoToolStripMenuItem.Text = "ABMC TipoSorteo"
-        '
-        'UsuarioToolStripMenuItem
-        '
-        Me.UsuarioToolStripMenuItem.Name = "UsuarioToolStripMenuItem"
-        Me.UsuarioToolStripMenuItem.Size = New System.Drawing.Size(96, 20)
-        Me.UsuarioToolStripMenuItem.Text = "ABMC Usuario"
+        Me.ABMCTipoSorteoToolStripMenuItem.Size = New System.Drawing.Size(56, 20)
+        Me.ABMCTipoSorteoToolStripMenuItem.Text = "ABMC "
         '
         'ReportesToolStripMenuItem
         '
@@ -86,6 +82,18 @@ Partial Class frmPrincipal
         Me.ToolStripStatusLabel.Size = New System.Drawing.Size(42, 17)
         Me.ToolStripStatusLabel.Text = "Estado"
         '
+        'TipoSorteroToolStripMenuItem
+        '
+        Me.TipoSorteroToolStripMenuItem.Name = "TipoSorteroToolStripMenuItem"
+        Me.TipoSorteroToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.TipoSorteroToolStripMenuItem.Text = "Tipo Sortero"
+        '
+        'UsuarioToolStripMenuItem1
+        '
+        Me.UsuarioToolStripMenuItem1.Name = "UsuarioToolStripMenuItem1"
+        Me.UsuarioToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.UsuarioToolStripMenuItem1.Text = "Usuario"
+        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -113,7 +121,8 @@ Partial Class frmPrincipal
     Friend WithEvents StatusStrip As System.Windows.Forms.StatusStrip
     Friend WithEvents MenuStrip As System.Windows.Forms.MenuStrip
     Friend WithEvents ABMCTipoSorteoToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents UsuarioToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents UsuariosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TipoSorteroToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UsuarioToolStripMenuItem1 As ToolStripMenuItem
 End Class

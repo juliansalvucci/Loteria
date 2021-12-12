@@ -25,7 +25,7 @@ Public Class fUsuario
         End Try
     End Function
 
-    Public Function Consultar_Usuario() As DataTable 'tipodatatable, crea en memoria una tabla cargada con info que genera desde el comando que ejecutemos'
+    Public Function Consulta_Usuario() As DataTable 'tipodatatable, crea en memoria una tabla cargada con info que genera desde el comando que ejecutemos'
 
         'Función que cargará en memoria la tabla TipoSorteo
 
@@ -91,7 +91,7 @@ Public Class fUsuario
         End Try
     End Function
 
-    Public Function Modificar_Usuario(ByVal dts As logUsuario) As Boolean
+    Public Function Modificacion_Usuario(ByVal dts As logUsuario) As Boolean
         'La función retornará VERDADERO si se actualiza ok el registro.
         'Sino, devolverá FALSO.
         Try
