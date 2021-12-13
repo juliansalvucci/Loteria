@@ -161,6 +161,12 @@
     <Compile Include="Presentacion\frmPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Presentacion\frmSorteo.Designer.vb">
+      <DependentUpon>frmSorteo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmSorteo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentacion\frmTipoSorteo.Designer.vb">
       <DependentUpon>frmTipoSorteo.vb</DependentUpon>
     </Compile>
@@ -205,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmSorteo.resx">
+      <DependentUpon>frmSorteo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmTipoSorteo.resx">
       <DependentUpon>frmTipoSorteo.vb</DependentUpon>

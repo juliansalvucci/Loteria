@@ -39,13 +39,13 @@ Public Class fSorteo
 
         Try
             funcConectarDB()
-            cmd = New SqlCommand("Insertar_Sorteo") 'seto el comando de sql y tiene que ejecutar un objeto en la DB "Insertar_TipoSorteo"
+            cmd = New SqlCommand("INSERTAR_Sorteo") 'seto el comando de sql y tiene que ejecutar un objeto en la DB "Insertar_TipoSorteo"
             cmd.CommandType = CommandType.StoredProcedure 'ese objeto almacenado en la base de datos es de tipo StoredProcedure
             cmd.Connection = CNN ' y la informacion para abrir la conexion esta en la variable CNN que es una variable SqlConnection
 
             'el procedimiento almacenado tiene 2 parametro por lo tanto se deben indicar 
             'tomando eso valor de las propiedades creadas en la funcion logica 
-            cmd.Parameters.AddWithValue("@Fecha", dts.pFecha)
+            cmd.Parameters.AddWithValue("@Fecha", DateTime.Today)
             cmd.Parameters.AddWithValue("@IDTipoSorteo", dts.pIDTipoSorteo)
 
             If cmd.ExecuteNonQuery Then
@@ -74,7 +74,6 @@ Public Class fSorteo
             cmd.Connection = CNN
 
             cmd.Parameters.AddWithValue("@ID", dts.pID)
-            cmd.Parameters.AddWithValue("@Fecha", dts.pFecha)
             cmd.Parameters.AddWithValue("@IDTipoSorteo", dts.pIDTipoSorteo)
 
             If cmd.ExecuteNonQuery Then
