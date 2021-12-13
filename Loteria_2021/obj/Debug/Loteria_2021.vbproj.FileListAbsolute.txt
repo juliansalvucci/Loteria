@@ -75,3 +75,6 @@ C:\Users\julia\source\repos\Loteria_2021\Loteria_2021\obj\Debug\Loteria_2021.vbp
 C:\Users\julia\source\repos\Loteria_2021\Loteria_2021\obj\Debug\RdlCompile.cache
 C:\Users\julia\source\repos\Loteria_2021\Loteria_2021\obj\Debug\RdlCompile.compiled
 C:\Users\julia\source\repos\Loteria_2021\Loteria_2021\obj\Debug\Loteria_2021.ReporteUsuarios.resources
+C:\Users\julia\source\repos\Loteria_2021\Loteria_2021\obj\Debug\Loteria_2021.frmAgencia.resources
+C:\Users\julia\source\repos\Loteria_2021\Loteria_2021\obj\Debug\Loteria_2021.ReporteAgencia.resources
+C:\Users\julia\source\repos\Loteria_2021\Loteria_2021\obj\Debug\Loteria_2021.frmApuesta.resources

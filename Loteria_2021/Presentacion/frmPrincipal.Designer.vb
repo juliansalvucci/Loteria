@@ -27,13 +27,15 @@ Partial Class frmPrincipal
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPrincipal))
         Me.MenuStrip = New System.Windows.Forms.MenuStrip()
         Me.ABMCTipoSorteoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TipoSorteroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UsuarioToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.TipoSorteroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UsuarioToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AgenciaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AgenciaToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
         Me.SuspendLayout()
@@ -49,14 +51,26 @@ Partial Class frmPrincipal
         '
         'ABMCTipoSorteoToolStripMenuItem
         '
-        Me.ABMCTipoSorteoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TipoSorteroToolStripMenuItem, Me.UsuarioToolStripMenuItem1})
+        Me.ABMCTipoSorteoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TipoSorteroToolStripMenuItem, Me.UsuarioToolStripMenuItem1, Me.AgenciaToolStripMenuItem})
         Me.ABMCTipoSorteoToolStripMenuItem.Name = "ABMCTipoSorteoToolStripMenuItem"
         Me.ABMCTipoSorteoToolStripMenuItem.Size = New System.Drawing.Size(56, 20)
         Me.ABMCTipoSorteoToolStripMenuItem.Text = "ABMC "
         '
+        'TipoSorteroToolStripMenuItem
+        '
+        Me.TipoSorteroToolStripMenuItem.Name = "TipoSorteroToolStripMenuItem"
+        Me.TipoSorteroToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.TipoSorteroToolStripMenuItem.Text = "Tipo Sortero"
+        '
+        'UsuarioToolStripMenuItem1
+        '
+        Me.UsuarioToolStripMenuItem1.Name = "UsuarioToolStripMenuItem1"
+        Me.UsuarioToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.UsuarioToolStripMenuItem1.Text = "Usuario"
+        '
         'ReportesToolStripMenuItem
         '
-        Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsuariosToolStripMenuItem})
+        Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsuariosToolStripMenuItem, Me.AgenciaToolStripMenuItem1})
         Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
         Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
         Me.ReportesToolStripMenuItem.Text = "Reportes"
@@ -82,17 +96,17 @@ Partial Class frmPrincipal
         Me.ToolStripStatusLabel.Size = New System.Drawing.Size(42, 17)
         Me.ToolStripStatusLabel.Text = "Estado"
         '
-        'TipoSorteroToolStripMenuItem
+        'AgenciaToolStripMenuItem
         '
-        Me.TipoSorteroToolStripMenuItem.Name = "TipoSorteroToolStripMenuItem"
-        Me.TipoSorteroToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.TipoSorteroToolStripMenuItem.Text = "Tipo Sortero"
+        Me.AgenciaToolStripMenuItem.Name = "AgenciaToolStripMenuItem"
+        Me.AgenciaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AgenciaToolStripMenuItem.Text = "Agencia"
         '
-        'UsuarioToolStripMenuItem1
+        'AgenciaToolStripMenuItem1
         '
-        Me.UsuarioToolStripMenuItem1.Name = "UsuarioToolStripMenuItem1"
-        Me.UsuarioToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
-        Me.UsuarioToolStripMenuItem1.Text = "Usuario"
+        Me.AgenciaToolStripMenuItem1.Name = "AgenciaToolStripMenuItem1"
+        Me.AgenciaToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.AgenciaToolStripMenuItem1.Text = "Agencia"
         '
         'frmPrincipal
         '
@@ -125,4 +139,6 @@ Partial Class frmPrincipal
     Friend WithEvents UsuariosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TipoSorteroToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents UsuarioToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents AgenciaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AgenciaToolStripMenuItem1 As ToolStripMenuItem
 End Class

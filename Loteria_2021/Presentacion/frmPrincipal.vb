@@ -91,4 +91,12 @@ Public Class frmPrincipal
     Private Sub UsuarioToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles UsuarioToolStripMenuItem1.Click
         frmUsuario.Show()
     End Sub
+
+    Private Sub AgenciaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AgenciaToolStripMenuItem.Click
+        frmAgencia.Show()
+    End Sub
+
+    Private Sub AgenciaToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles AgenciaToolStripMenuItem1.Click
+        ReporteAgencia.Show()
+    End Sub
 End Class

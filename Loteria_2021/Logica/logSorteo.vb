@@ -1,7 +1,6 @@
-﻿Public Class logAgencia
-    Dim ID, Ciudad As Integer
-    Dim Nombre As String
-    Dim Ganancia As Decimal
+﻿Public Class logSorteo
+    Dim ID, IDTipoSorteo As Integer
+    Dim Fecha As Date
 
     Public Property pID
         'declara el nombre de una propiedad y los procedimientos de porpiedad usados para almacenar y
@@ -13,35 +12,27 @@
         Get 'inicia un procedimiento de propiedad get que se una para devolver el valor de la propiedad.
             Return ID
         End Get
-        Set(value) 'inicia un procedimiento de propiedad set que se usa para almacenar el valor de la propiedad
+        Set(value) 'inicia un procedimiento de propiedad ser que se usa para almacenar el valor de la propiedad
             ID = value
         End Set
     End Property
 
-    Public Property pNombre
+    Public Property pFecha
         Get
-            Return Nombre
+            Return Fecha
         End Get
         Set(value)
-            Nombre = value
+            Fecha = value
         End Set
     End Property
 
-    Public Property pCiudad
+    Public Property pIDTipoSorteo
         Get
-            Return Ciudad
-        End Get
-        Set(value)
-            Ciudad = value
-        End Set
-    End Property
+            Return IDTipoSorteo
 
-    Public Property pGanancia
-        Get
-            Return Ganancia
         End Get
         Set(value)
-            Ganancia = value
+            IDTipoSorteo = value
         End Set
     End Property
 
@@ -55,10 +46,10 @@
         'Para crear un constructor parametrizado, especifique los nombres y los tipos de datos de los argumentos en Sub New tal y como haría al especificar argumentos en cualquier otro procedimiento.
     End Sub
 
-    Public Sub New(ByVal ID As Integer, ByVal Nombre As String, ByVal Ciudad As Integer, ByVal Ganancia As Decimal)
+    Public Sub New(ByVal ID As Integer, ByVal Fecha As Date, ByVal IDTipoSorteo As Integer)
         pID = ID
-        pNombre = Nombre
-        pGanancia = Ganancia
-        pCiudad = Ciudad
+        pFecha = Fecha
+        pIDTipoSorteo = IDTipoSorteo
+
     End Sub
 End Class

@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Datos",
+    "\\Logica",
     "\\Presentacion"
   ],
-  "SelectedNode": "\\Presentacion\\frmAgencia.vb",
+  "SelectedNode": "\\Loteria_2021.vbproj",
   "PreviewInSolutionExplorer": false
 }

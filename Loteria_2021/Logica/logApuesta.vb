@@ -1,7 +1,5 @@
-﻿Public Class logAgencia
-    Dim ID, Ciudad As Integer
-    Dim Nombre As String
-    Dim Ganancia As Decimal
+﻿Public Class logApuesta
+    Dim ID, Numero, Monto, Agencia, Sorteo As Integer
 
     Public Property pID
         'declara el nombre de una propiedad y los procedimientos de porpiedad usados para almacenar y
@@ -13,35 +11,44 @@
         Get 'inicia un procedimiento de propiedad get que se una para devolver el valor de la propiedad.
             Return ID
         End Get
-        Set(value) 'inicia un procedimiento de propiedad set que se usa para almacenar el valor de la propiedad
+        Set(value) 'inicia un procedimiento de propiedad ser que se usa para almacenar el valor de la propiedad
             ID = value
         End Set
     End Property
 
-    Public Property pNombre
+    Public Property pNumero
         Get
-            Return Nombre
+            Return Numero
         End Get
         Set(value)
-            Nombre = value
+            Numero = value
         End Set
     End Property
 
-    Public Property pCiudad
+    Public Property pMonto
         Get
-            Return Ciudad
+            Return Monto
         End Get
         Set(value)
-            Ciudad = value
+            Monto = value
         End Set
     End Property
 
-    Public Property pGanancia
+    Public Property pSorteo
         Get
-            Return Ganancia
+            Return Sorteo
         End Get
         Set(value)
-            Ganancia = value
+            Sorteo = value
+        End Set
+    End Property
+
+    Public Property pAgencia
+        Get
+            Return Agencia
+        End Get
+        Set(value)
+            Agencia = value
         End Set
     End Property
 
@@ -55,10 +62,11 @@
         'Para crear un constructor parametrizado, especifique los nombres y los tipos de datos de los argumentos en Sub New tal y como haría al especificar argumentos en cualquier otro procedimiento.
     End Sub
 
-    Public Sub New(ByVal ID As Integer, ByVal Nombre As String, ByVal Ciudad As Integer, ByVal Ganancia As Decimal)
+    Public Sub New(ByVal ID As Integer, ByVal Monto As Integer, ByVal Numero As Integer, ByVal Agencia As Integer, ByVal Sorteo As Integer)
         pID = ID
-        pNombre = Nombre
-        pGanancia = Ganancia
-        pCiudad = Ciudad
+        pNumero = Numero
+        pMonto = Monto
+        pSorteo = Sorteo
+        pAgencia = Agencia
     End Sub
 End Class
