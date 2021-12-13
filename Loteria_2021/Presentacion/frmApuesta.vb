@@ -161,6 +161,10 @@
         End If
     End Sub
 
+    Private Sub btmCerrar_Click(sender As Object, e As EventArgs) Handles btmCerrar.Click
+        Me.Close()
+    End Sub
+
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
         If btnAgregar.Text = "Agregar" Then
             ModoPantalla = ModoPantalla.ModoALTA

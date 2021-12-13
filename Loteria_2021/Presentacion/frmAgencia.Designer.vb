@@ -38,6 +38,9 @@ Partial Class frmAgencia
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.ErrProvAgencia = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dataAgencia, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -47,6 +50,9 @@ Partial Class frmAgencia
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.txtGanancia)
         Me.GroupBox1.Controls.Add(Me.txtNombre)
         Me.GroupBox1.Controls.Add(Me.txtID)
@@ -55,18 +61,17 @@ Partial Class frmAgencia
         Me.GroupBox1.Size = New System.Drawing.Size(257, 177)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "GroupBox1"
         '
         'txtGanancia
         '
-        Me.txtGanancia.Location = New System.Drawing.Point(69, 114)
+        Me.txtGanancia.Location = New System.Drawing.Point(119, 115)
         Me.txtGanancia.Name = "txtGanancia"
         Me.txtGanancia.Size = New System.Drawing.Size(100, 20)
         Me.txtGanancia.TabIndex = 2
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(69, 77)
+        Me.txtNombre.Location = New System.Drawing.Point(119, 79)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(100, 20)
         Me.txtNombre.TabIndex = 1
@@ -74,7 +79,7 @@ Partial Class frmAgencia
         'txtID
         '
         Me.txtID.Enabled = False
-        Me.txtID.Location = New System.Drawing.Point(69, 42)
+        Me.txtID.Location = New System.Drawing.Point(119, 42)
         Me.txtID.Name = "txtID"
         Me.txtID.Size = New System.Drawing.Size(100, 20)
         Me.txtID.TabIndex = 0
@@ -87,16 +92,15 @@ Partial Class frmAgencia
         Me.GroupBox2.Controls.Add(Me.dataAgencia)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 195)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(463, 189)
+        Me.GroupBox2.Size = New System.Drawing.Size(463, 218)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "GroupBox2"
         '
         'txtBuscar
         '
-        Me.txtBuscar.Location = New System.Drawing.Point(157, 10)
+        Me.txtBuscar.Location = New System.Drawing.Point(157, 13)
         Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(100, 20)
+        Me.txtBuscar.Size = New System.Drawing.Size(168, 20)
         Me.txtBuscar.TabIndex = 3
         '
         'cboBuscar
@@ -110,17 +114,20 @@ Partial Class frmAgencia
         '
         'btnBuscar
         '
-        Me.btnBuscar.Location = New System.Drawing.Point(354, 10)
+        Me.btnBuscar.Image = Global.Loteria_2021.My.Resources.Resources.Buscar
+        Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnBuscar.Location = New System.Drawing.Point(331, 10)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
+        Me.btnBuscar.Size = New System.Drawing.Size(75, 37)
         Me.btnBuscar.TabIndex = 3
         Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnBuscar.UseVisualStyleBackColor = True
         '
         'dataAgencia
         '
         Me.dataAgencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dataAgencia.Location = New System.Drawing.Point(6, 39)
+        Me.dataAgencia.Location = New System.Drawing.Point(6, 53)
         Me.dataAgencia.Name = "dataAgencia"
         Me.dataAgencia.Size = New System.Drawing.Size(451, 150)
         Me.dataAgencia.TabIndex = 0
@@ -135,38 +142,46 @@ Partial Class frmAgencia
         Me.GroupBox3.Size = New System.Drawing.Size(200, 177)
         Me.GroupBox3.TabIndex = 1
         Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "GroupBox3"
         '
         'btnEliminar
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(68, 129)
+        Me.btnEliminar.Image = Global.Loteria_2021.My.Resources.Resources.Quitar_Todo
+        Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnEliminar.Location = New System.Drawing.Point(57, 115)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(75, 23)
+        Me.btnEliminar.Size = New System.Drawing.Size(86, 41)
         Me.btnEliminar.TabIndex = 2
         Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnEliminar.UseVisualStyleBackColor = True
         '
         'btnModificar
         '
-        Me.btnModificar.Location = New System.Drawing.Point(68, 75)
+        Me.btnModificar.Image = Global.Loteria_2021.My.Resources.Resources.Editar
+        Me.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnModificar.Location = New System.Drawing.Point(57, 68)
         Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(75, 23)
+        Me.btnModificar.Size = New System.Drawing.Size(86, 41)
         Me.btnModificar.TabIndex = 1
         Me.btnModificar.Text = "Modificar"
+        Me.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnModificar.UseVisualStyleBackColor = True
         '
         'btnAgregar
         '
-        Me.btnAgregar.Location = New System.Drawing.Point(68, 19)
+        Me.btnAgregar.Image = Global.Loteria_2021.My.Resources.Resources.Agregar_Todo
+        Me.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnAgregar.Location = New System.Drawing.Point(57, 19)
         Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
+        Me.btnAgregar.Size = New System.Drawing.Size(86, 43)
         Me.btnAgregar.TabIndex = 0
         Me.btnAgregar.Text = "Agregar"
+        Me.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnAgregar.UseVisualStyleBackColor = True
         '
         'btnCerrar
         '
-        Me.btnCerrar.Location = New System.Drawing.Point(366, 390)
+        Me.btnCerrar.Location = New System.Drawing.Point(366, 419)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(75, 23)
         Me.btnCerrar.TabIndex = 3
@@ -177,11 +192,38 @@ Partial Class frmAgencia
         '
         Me.ErrProvAgencia.ContainerControl = Me
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(54, 42)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(18, 13)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "ID"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(54, 79)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(44, 13)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "Nombre"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(54, 118)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(53, 13)
+        Me.Label4.TabIndex = 6
+        Me.Label4.Text = "Ganancia"
+        '
         'frmAgencia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(487, 422)
+        Me.ClientSize = New System.Drawing.Size(487, 454)
         Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox3)
@@ -214,4 +256,7 @@ Partial Class frmAgencia
     Friend WithEvents btnBuscar As Button
     Friend WithEvents btnCerrar As Button
     Friend WithEvents ErrProvAgencia As ErrorProvider
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
 End Class

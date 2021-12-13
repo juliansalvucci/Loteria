@@ -39,6 +39,12 @@ Partial Class frmApuesta
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.ErrProvApuesta = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.btmCerrar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dataApuesta, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -48,6 +54,11 @@ Partial Class frmApuesta
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.cboApuesta)
         Me.GroupBox1.Controls.Add(Me.cboSorteo)
         Me.GroupBox1.Controls.Add(Me.cboAgencia)
@@ -58,13 +69,12 @@ Partial Class frmApuesta
         Me.GroupBox1.Size = New System.Drawing.Size(342, 179)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "GroupBox1"
         '
         'cboApuesta
         '
         Me.cboApuesta.FormattingEnabled = True
         Me.cboApuesta.Items.AddRange(New Object() {"10,0000", "20,0000", "30,0000", "40,0000", "50,0000", "60,0000", "70,0000", "80,0000", "90,0000", "100,0000"})
-        Me.cboApuesta.Location = New System.Drawing.Point(183, 52)
+        Me.cboApuesta.Location = New System.Drawing.Point(183, 71)
         Me.cboApuesta.Name = "cboApuesta"
         Me.cboApuesta.Size = New System.Drawing.Size(121, 21)
         Me.cboApuesta.TabIndex = 4
@@ -73,7 +83,7 @@ Partial Class frmApuesta
         '
         Me.cboSorteo.FormattingEnabled = True
         Me.cboSorteo.Items.AddRange(New Object() {"1", "2", "3"})
-        Me.cboSorteo.Location = New System.Drawing.Point(8, 87)
+        Me.cboSorteo.Location = New System.Drawing.Point(8, 118)
         Me.cboSorteo.Name = "cboSorteo"
         Me.cboSorteo.Size = New System.Drawing.Size(121, 21)
         Me.cboSorteo.TabIndex = 3
@@ -81,14 +91,14 @@ Partial Class frmApuesta
         'cboAgencia
         '
         Me.cboAgencia.FormattingEnabled = True
-        Me.cboAgencia.Location = New System.Drawing.Point(8, 52)
+        Me.cboAgencia.Location = New System.Drawing.Point(8, 71)
         Me.cboAgencia.Name = "cboAgencia"
         Me.cboAgencia.Size = New System.Drawing.Size(121, 21)
         Me.cboAgencia.TabIndex = 2
         '
         'txtNumero
         '
-        Me.txtNumero.Location = New System.Drawing.Point(183, 88)
+        Me.txtNumero.Location = New System.Drawing.Point(183, 118)
         Me.txtNumero.Name = "txtNumero"
         Me.txtNumero.Size = New System.Drawing.Size(121, 20)
         Me.txtNumero.TabIndex = 1
@@ -96,7 +106,7 @@ Partial Class frmApuesta
         'IDAGENCIA
         '
         Me.IDAGENCIA.Enabled = False
-        Me.IDAGENCIA.Location = New System.Drawing.Point(8, 19)
+        Me.IDAGENCIA.Location = New System.Drawing.Point(8, 28)
         Me.IDAGENCIA.Name = "IDAGENCIA"
         Me.IDAGENCIA.Size = New System.Drawing.Size(100, 20)
         Me.IDAGENCIA.TabIndex = 0
@@ -109,24 +119,23 @@ Partial Class frmApuesta
         Me.GroupBox2.Controls.Add(Me.btnBuscar)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 197)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(548, 170)
+        Me.GroupBox2.Size = New System.Drawing.Size(548, 215)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "GroupBox2"
         '
         'dataApuesta
         '
         Me.dataApuesta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dataApuesta.Location = New System.Drawing.Point(19, 45)
+        Me.dataApuesta.Location = New System.Drawing.Point(19, 59)
         Me.dataApuesta.Name = "dataApuesta"
         Me.dataApuesta.Size = New System.Drawing.Size(479, 150)
         Me.dataApuesta.TabIndex = 6
         '
         'txtBuscar
         '
-        Me.txtBuscar.Location = New System.Drawing.Point(183, 19)
+        Me.txtBuscar.Location = New System.Drawing.Point(146, 19)
         Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(121, 20)
+        Me.txtBuscar.Size = New System.Drawing.Size(246, 20)
         Me.txtBuscar.TabIndex = 5
         '
         'cboBuscar
@@ -140,11 +149,14 @@ Partial Class frmApuesta
         '
         'btnBuscar
         '
-        Me.btnBuscar.Location = New System.Drawing.Point(417, 19)
+        Me.btnBuscar.Image = Global.Loteria_2021.My.Resources.Resources.Buscar
+        Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnBuscar.Location = New System.Drawing.Point(398, 16)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
+        Me.btnBuscar.Size = New System.Drawing.Size(85, 37)
         Me.btnBuscar.TabIndex = 3
         Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnBuscar.UseVisualStyleBackColor = True
         '
         'GroupBox3
@@ -157,47 +169,112 @@ Partial Class frmApuesta
         Me.GroupBox3.Size = New System.Drawing.Size(200, 179)
         Me.GroupBox3.TabIndex = 1
         Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "GroupBox3"
         '
         'btnEliminar
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(60, 139)
+        Me.btnEliminar.Image = Global.Loteria_2021.My.Resources.Resources.Quitar_Todo
+        Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnEliminar.Location = New System.Drawing.Point(50, 121)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(75, 23)
+        Me.btnEliminar.Size = New System.Drawing.Size(85, 39)
         Me.btnEliminar.TabIndex = 2
         Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnEliminar.UseVisualStyleBackColor = True
         '
         'btnModificar
         '
-        Me.btnModificar.Location = New System.Drawing.Point(60, 85)
+        Me.btnModificar.Image = Global.Loteria_2021.My.Resources.Resources.Editar
+        Me.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnModificar.Location = New System.Drawing.Point(50, 76)
         Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(75, 23)
+        Me.btnModificar.Size = New System.Drawing.Size(85, 39)
         Me.btnModificar.TabIndex = 1
         Me.btnModificar.Text = "Modificar"
+        Me.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnModificar.UseVisualStyleBackColor = True
         '
         'btnAgregar
         '
-        Me.btnAgregar.Location = New System.Drawing.Point(60, 28)
+        Me.btnAgregar.Image = Global.Loteria_2021.My.Resources.Resources.Agregar_Todo
+        Me.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnAgregar.Location = New System.Drawing.Point(50, 28)
         Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
+        Me.btnAgregar.Size = New System.Drawing.Size(85, 39)
         Me.btnAgregar.TabIndex = 0
         Me.btnAgregar.Text = "Agregar"
+        Me.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnAgregar.UseVisualStyleBackColor = True
         '
         'ErrProvApuesta
         '
         Me.ErrProvApuesta.ContainerControl = Me
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(6, 12)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(18, 13)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "ID"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(6, 102)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(38, 13)
+        Me.Label2.TabIndex = 6
+        Me.Label2.Text = "Sorteo"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(6, 55)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(46, 13)
+        Me.Label3.TabIndex = 7
+        Me.Label3.Text = "Agencia"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(180, 55)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(46, 13)
+        Me.Label4.TabIndex = 8
+        Me.Label4.Text = "Apuesta"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(182, 102)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(44, 13)
+        Me.Label5.TabIndex = 9
+        Me.Label5.Text = "Número"
+        '
+        'btmCerrar
+        '
+        Me.btmCerrar.Location = New System.Drawing.Point(410, 415)
+        Me.btmCerrar.Name = "btmCerrar"
+        Me.btmCerrar.Size = New System.Drawing.Size(85, 23)
+        Me.btmCerrar.TabIndex = 2
+        Me.btmCerrar.Text = "Cerrar"
+        Me.btmCerrar.UseVisualStyleBackColor = True
+        '
         'frmApuesta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(563, 450)
+        Me.Controls.Add(Me.btmCerrar)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox1)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmApuesta"
         Me.Text = "frmApuesta"
         Me.GroupBox1.ResumeLayout(False)
@@ -227,4 +304,10 @@ Partial Class frmApuesta
     Friend WithEvents dataApuesta As DataGridView
     Friend WithEvents txtBuscar As TextBox
     Friend WithEvents ErrProvApuesta As ErrorProvider
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents btmCerrar As Button
 End Class
