@@ -87,7 +87,6 @@ Partial Class frmSorteo
         Me.cboSorteo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.cboSorteo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.cboSorteo.FormattingEnabled = True
-        Me.cboSorteo.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
         Me.cboSorteo.Location = New System.Drawing.Point(108, 56)
         Me.cboSorteo.Name = "cboSorteo"
         Me.cboSorteo.Size = New System.Drawing.Size(121, 21)

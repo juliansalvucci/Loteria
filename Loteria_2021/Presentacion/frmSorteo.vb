@@ -22,22 +22,21 @@
         End Try
 
 
-        'Try
-        'Dim FuncionMostrar As New fTipoSorteo
-        'dt2 = FuncionMostrar.Mostrar_TipoSorteo
-
-        'If dt2.Rows.Count <> 0 Then
-        'cboSorteo.DataSource = dt2
-        'o.DisplayMember = "TIPO SORTEO"
-        'o.ValueMember = "ID"
-        'Else
-        'cboSorteo.DataSource = Nothing
-        'End If
-        'Catch ex As Exception
-        'MessageBox.Show("Atención: se ha generado un error tratando de mostrar los Sorteos." &
-        'Environment.NewLine & "Descripción del error: " & Environment.NewLine &
-        'ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        'End Try
+        Try
+            Dim FuncionMostrar As New fTipoSorteo
+            dt2 = FuncionMostrar.Mostrar_TipoSorteo
+            If dt2.Rows.Count <> 0 Then
+                cboSorteo.DataSource = dt2
+                cboSorteo.DisplayMember = "NOMBRE"
+                cboSorteo.ValueMember = "ID"
+            Else
+                cboSorteo.DataSource = Nothing
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Atención: se ha generado un error tratando de mostrar los Sorteos." &
+        Environment.NewLine & "Descripción del error: " & Environment.NewLine &
+        ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
 
     End Sub
     Private Sub Inicia_Pantalla()
@@ -95,23 +94,6 @@
         If btnAgregar.Text = "Agregar" Then
             ModoPantalla = ModoPantalla.ModoALTA
 
-            Try
-                Dim FuncionMostrar As New fTipoSorteo
-                dt2 = FuncionMostrar.Mostrar_TipoSorteo
-
-                If dt2.Rows.Count <> 0 Then
-                    cboSorteo.DataSource = dt2
-                    cboSorteo.DisplayMember = "TIPO SORTEO"
-                    cboSorteo.ValueMember = "ID"
-                Else
-                    cboSorteo.DataSource = Nothing
-                End If
-            Catch ex As Exception
-                MessageBox.Show("Atención: se ha generado un error tratando de mostrar los Sorteos." &
-        Environment.NewLine & "Descripción del error: " & Environment.NewLine &
-        ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End Try
-
             modFuncionesForm.LimpiarTextos(Me)
             modFuncionesForm.HabilitarTextos(Me)
 
@@ -148,7 +130,7 @@
                     Dim FuncionInsertar As New fSorteo
 
 
-                    dts.pIDTipoSorteo = cboSorteo.Text
+                    dts.pIDTipoSorteo = cboSorteo.SelectedValue
 
                     If FuncionInsertar.Insertar_Sorteo(dts) Then
                         Mostrar_Datos()
@@ -173,7 +155,7 @@
                     Dim FuncionInsertar As New fSorteo
 
                     dts.pID = txtID.Text
-                    dts.pIDTipoSorteo = cboSorteo.SelectedItem
+                    dts.pIDTipoSorteo = cboSorteo.SelectedValue
 
                     If FuncionInsertar.Modificar_Sorteo(dts) Then
                         Mostrar_Datos()
@@ -262,7 +244,7 @@
 
     Private Sub dataTipoSorteo_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dataSorteo.CellClick
         txtID.Text = dataSorteo.CurrentRow.Cells("ID").Value
-        cboSorteo.Text = dataSorteo.CurrentRow.Cells("IDTIPOSORTEO").Value
+        cboSorteo.Text = dataSorteo.CurrentRow.Cells("TIPO SORTEO").Value
 
         btnModificar.Enabled = True
         btnEliminar.Enabled = True

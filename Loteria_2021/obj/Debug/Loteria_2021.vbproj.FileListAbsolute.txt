@@ -162,3 +162,5 @@ C:\Users\julia\Desktop\Loteria-main\Loteria_2021\obj\Debug\Loteria_2021.xml
 C:\Users\julia\Desktop\Loteria-main\Loteria_2021\obj\Debug\Loteria_2021.pdb
 C:\Users\julia\Desktop\Loteria-main\Loteria_2021\obj\Debug\Loteria_2021.ReporteApuesta.resources
 C:\Users\julia\Desktop\Loteria-main\Loteria_2021\obj\Debug\Loteria_2021.ReporteUsuarios2.resources
+C:\Users\julia\source\repos\Loteria_2021\Loteria_2021\obj\Debug\Loteria_2021.ReporteApuesta.resources
+C:\Users\julia\source\repos\Loteria_2021\Loteria_2021\obj\Debug\Loteria_2021.ReporteUsuarios2.resources
