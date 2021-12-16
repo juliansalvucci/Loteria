@@ -42,6 +42,7 @@
             cboBuscar.Enabled = False
             txtBuscar.Enabled = False
             btnAgregar.Enabled = True
+            btnModificar.Image = My.Resources.Editar
             CheckHabilitado.Enabled = False
             btnAgregar.Focus()
         Else
@@ -49,6 +50,7 @@
             'Caso contrario habilitar las posibilidades.
 
             btnModificar.Enabled = False
+            btnModificar.Image = My.Resources.Editar
             btnEliminar.Enabled = False
             btnBuscar.Enabled = True
             cboBuscar.Enabled = True : cboBuscar.SelectedIndex = 1
@@ -123,6 +125,7 @@
         'Si la propiedad text del botón es "Agregar" entonces activar el modo para dar de alta.
         If btnAgregar.Text = "Agregar" Then
 
+            btnEliminar.Hide()
             modopantalla = modFuncionesForm.ModoPantalla.ModoALTA
             modFuncionesForm.LimpiarTextos(Me)
             modFuncionesForm.HabilitarTextos(Me)
@@ -140,6 +143,7 @@
             'el botón agregar pasa a ser confirmar.
             'el botón modificar pasa a ser cancelar.
             btnAgregar.Text = "Confirmar"
+            btnModificar.Image = My.Resources.Quitar_Todo
             btnModificar.Text = "Cancelar"
             txtNombre.Focus() 'Focalizo el cursor en el campo txtNormbre.
         Else
@@ -306,7 +310,9 @@
             btnModificar.Text = "Modificar"
             btnCerrar.Enabled = True
             dataUsuario.Enabled = True
+            btnModificar.Image = My.Resources.Editar
             ErrProvUsuario.SetError(txtNombre, "")
+            btnEliminar.Show()
         Else
 
             'Caso contrario habilitar el modo modificación.
@@ -325,7 +331,9 @@
             dataUsuario.Enabled = False
             btnAgregar.Text = "Confirmar"
             btnModificar.Text = "Cancelar"
+            btnModificar.Image = My.Resources.Quitar_Todo
             txtNombre.Focus()
+            btnEliminar.Hide()
         End If
     End Sub
 

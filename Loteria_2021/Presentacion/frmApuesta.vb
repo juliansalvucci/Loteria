@@ -30,7 +30,7 @@
 
             If dtx.Rows.Count <> 0 Then
                 cboAgencia.DataSource = dtx
-                cboAgencia.DisplayMember = "NOMBRE"
+                cboAgencia.DisplayMember = "NOMBREAGENCIA"
                 cboAgencia.ValueMember = "ID"
             Else
                 cboAgencia.DataSource = Nothing
@@ -72,9 +72,11 @@
             btnBuscar.Enabled = False
             cboBuscar.Enabled = False
             txtBuscar.Enabled = False
+            btnModificar.Image = My.Resources.Editar
             btnAgregar.Focus()
         Else
             btnModificar.Enabled = False
+            btnModificar.Image = My.Resources.Editar
             btnEliminar.Enabled = False
             btnEliminar.Show()
             btnBuscar.Enabled = True
@@ -119,7 +121,7 @@
 
     Private Sub dataApuesta_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dataApuesta.CellClick
         IDAGENCIA.Text = dataApuesta.CurrentRow.Cells("ID").Value
-        cboAgencia.Text = dataApuesta.CurrentRow.Cells("NOMBRE").Value
+        cboAgencia.Text = dataApuesta.CurrentRow.Cells("AGENCIA").Value
         cboSorteo.Text = dataApuesta.CurrentRow.Cells("FECHA").Value
         cboApuesta.Text = dataApuesta.CurrentRow.Cells("MONTO").Value
         txtNumero.Text = dataApuesta.CurrentRow.Cells("NUMERO").Value
@@ -172,6 +174,7 @@
             modFuncionesForm.HabilitarTextos(Me)
 
             btnModificar.Text = "Cancelar" 'El botón Modificar pasa a ser Cancelar.
+            btnModificar.Image = My.Resources.Quitar_Todo
             btnModificar.Enabled = True
             btnBuscar.Enabled = False
             txtBuscar.Enabled = False
@@ -274,6 +277,7 @@
             btnAgregar.Text = "Agregar"
             btnModificar.Text = "Modificar"
             dataApuesta.Enabled = True
+            btnModificar.Image = My.Resources.Editar
             btnEliminar.Show()
         Else
             ModoPantalla = modFuncionesForm.ModoPantalla.ModoMODIFICACION
@@ -292,6 +296,7 @@
             btnModificar.Enabled = True
             btnEliminar.Hide()
             txtNumero.Focus()
+            btnModificar.Image = My.Resources.Quitar_Todo
         End If
     End Sub
 End Class

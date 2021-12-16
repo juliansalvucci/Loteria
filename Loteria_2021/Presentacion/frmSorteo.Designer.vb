@@ -23,7 +23,7 @@ Partial Class frmSorteo
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -155,7 +155,7 @@ Partial Class frmSorteo
         Me.btnAgregar.Size = New System.Drawing.Size(89, 38)
         Me.btnAgregar.TabIndex = 0
         Me.btnAgregar.Text = "Agregar"
-        Me.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnAgregar.UseVisualStyleBackColor = False
         '
@@ -173,9 +173,9 @@ Partial Class frmSorteo
         '
         'dataSorteo
         '
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.Silver
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight
-        Me.dataSorteo.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.dataSorteo.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dataSorteo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.dataSorteo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dataSorteo.EnableHeadersVisualStyles = False

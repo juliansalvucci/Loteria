@@ -29,6 +29,7 @@
         If dt.Rows.Count = 0 Then
             'Al no encontrar datos en la tabla 
             btnModificar.Enabled = False
+            btnModificar.Image = My.Resources.Editar
             btnEliminar.Enabled = False
             btnBuscar.Enabled = False
             cboBuscar.Enabled = False
@@ -36,6 +37,7 @@
             btnAgregar.Focus()
         Else
             btnModificar.Enabled = False
+            btnModificar.Image = My.Resources.Editar
             btnEliminar.Enabled = False
             btnEliminar.Show()
             btnBuscar.Enabled = True
@@ -58,7 +60,7 @@
             'Los cambios en los datos de DataView afectan a DataTable.
             'Los cambios en los datos de DataTable afectaran a todos los DataView asociados a el.
 
-            If cboBuscar.SelectedItem = "NOMBRE" Then
+            If cboBuscar.SelectedItem = "NOMBREAGENCIA" Then
                 dv.RowFilter = cboBuscar.Text & " LIKE '%" & txtBuscar.Text & "%'"
             Else
                 dv.RowFilter = cboBuscar.Text & " = " & txtBuscar.Text
@@ -92,6 +94,7 @@
             btnBuscar.Enabled = False
             cboBuscar.Enabled = False
             txtBuscar.Enabled = False
+            btnModificar.Image = My.Resources.Quitar_Todo
 
 
 
@@ -187,7 +190,7 @@
             btnModificar.Text = "Modificar"
             dataAgencia.Enabled = True
             btnEliminar.Show()
-            btnModificar.Image = My.Resources.Quitar_Todo
+            btnModificar.Image = My.Resources.Editar
             ErrProvAgencia.SetError(txtNombre, "")
         Else
             ModoPantalla = modFuncionesForm.ModoPantalla.ModoMODIFICACION
@@ -203,6 +206,7 @@
             btnModificar.Text = "Cancelar"
             btnModificar.Enabled = True
             btnEliminar.Hide()
+            btnModificar.Image = My.Resources.Quitar_Todo
 
             txtNombre.Focus()
         End If
@@ -267,7 +271,7 @@
 
     Private Sub dataAgencia_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dataAgencia.CellClick
         txtID.Text = dataAgencia.CurrentRow.Cells("ID").Value
-        txtNombre.Text = dataAgencia.CurrentRow.Cells("NOMBRE").Value
+        txtNombre.Text = dataAgencia.CurrentRow.Cells("NOMBREAGENCIA").Value
         txtGanancia.Text = dataAgencia.CurrentRow.Cells("GANANCIA").Value
 
         btnModificar.Enabled = True

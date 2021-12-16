@@ -52,6 +52,7 @@
             btnBuscar.Enabled = False
             cboBuscar.Enabled = False
             txtBuscar.Enabled = False
+            btnModificar.Image = My.Resources.Editar
             btnAgregar.Focus()
         Else
             btnModificar.Enabled = False
@@ -60,6 +61,7 @@
             btnBuscar.Enabled = True
             cboBuscar.Enabled = True : cboBuscar.SelectedIndex = 0
             txtBuscar.Enabled = True
+            btnModificar.Image = My.Resources.Editar
             txtBuscar.Focus()
         End If
     End Sub
@@ -113,6 +115,7 @@
             txtBuscar.Enabled = False
             txtID.Enabled = False
             dataSorteo.Enabled = False
+            btnModificar.Image = My.Resources.Quitar_Todo
 
             btnAgregar.Text = "Confirmar" 'El botón Agregar pasa a ser Confirmar.
 
@@ -193,6 +196,7 @@
             btnAgregar.Text = "Agregar"
             btnModificar.Text = "Modificar"
             dataSorteo.Enabled = True
+            btnModificar.Image = My.Resources.Editar
             btnEliminar.Show()
         Else
             ModoPantalla = modFuncionesForm.ModoPantalla.ModoMODIFICACION
@@ -209,6 +213,7 @@
             btnModificar.Text = "Cancelar"
             btnModificar.Enabled = True
             btnEliminar.Hide()
+            btnModificar.Image = My.Resources.Quitar_Todo
 
 
         End If
