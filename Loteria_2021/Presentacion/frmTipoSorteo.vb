@@ -78,7 +78,7 @@
         End Try
     End Sub
 
-    Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
+    Private Sub btnAgregar_Click(sender As Object, e As EventArgs)
         If btnAgregar.Text = "Agregar" Then
             ModoPantalla = modFuncionesForm.ModoPantalla.ModoALTA
 
@@ -166,7 +166,7 @@
         End If
     End Sub
 
-    Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
+    Private Sub btnModificar_Click(sender As Object, e As EventArgs)
         If btnModificar.Text = "Cancelar" Then
             ModoPantalla = modFuncionesForm.ModoPantalla.ModoCONSULTA
 
@@ -203,7 +203,7 @@
     End Sub
 
     'Procedimiento que establece el comportamiento del botón buscar.
-    Private Sub btnbuscar_click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+    Private Sub btnbuscar_click(sender As Object, e As EventArgs)
         Buscar_Datos()
     End Sub
 
@@ -215,7 +215,7 @@
         btnModificar.Enabled = True
         btnEliminar.Enabled = True
     End Sub
-    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs)
         Dim Respuesta As Integer = MessageBox.Show("Atención: ha seleccionado eliminar un tipo de sorteo. " &
                                                    Environment.NewLine &
                                                    "¿Confirma la eliminación?", "Eliminación de tipos de sorteo",
@@ -244,6 +244,5 @@
             End Try
         End If
     End Sub
-
 
 End Class

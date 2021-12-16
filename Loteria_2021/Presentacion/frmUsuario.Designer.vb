@@ -23,7 +23,7 @@ Partial Class frmUsuario
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -142,7 +142,7 @@ Partial Class frmUsuario
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(6, 51)
+        Me.Label4.Location = New System.Drawing.Point(11, 51)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(51, 14)
         Me.Label4.TabIndex = 8
@@ -152,7 +152,7 @@ Partial Class frmUsuario
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(19, 78)
+        Me.Label3.Location = New System.Drawing.Point(24, 78)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(38, 14)
         Me.Label3.TabIndex = 7
@@ -162,7 +162,7 @@ Partial Class frmUsuario
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(40, 22)
+        Me.Label2.Location = New System.Drawing.Point(45, 22)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(17, 14)
         Me.Label2.TabIndex = 6
@@ -186,7 +186,7 @@ Partial Class frmUsuario
         '
         'txtLogin
         '
-        Me.txtLogin.Location = New System.Drawing.Point(72, 78)
+        Me.txtLogin.Location = New System.Drawing.Point(77, 78)
         Me.txtLogin.Name = "txtLogin"
         Me.txtLogin.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtLogin.Size = New System.Drawing.Size(100, 20)
@@ -194,7 +194,7 @@ Partial Class frmUsuario
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(72, 48)
+        Me.txtNombre.Location = New System.Drawing.Point(77, 48)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtNombre.Size = New System.Drawing.Size(100, 20)
@@ -202,7 +202,7 @@ Partial Class frmUsuario
         '
         'txtID
         '
-        Me.txtID.Location = New System.Drawing.Point(72, 19)
+        Me.txtID.Location = New System.Drawing.Point(77, 19)
         Me.txtID.Name = "txtID"
         Me.txtID.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtID.Size = New System.Drawing.Size(48, 20)
@@ -250,6 +250,7 @@ Partial Class frmUsuario
         'btnAgregar
         '
         Me.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ErrorProvLogin.SetIconAlignment(Me.btnAgregar, System.Windows.Forms.ErrorIconAlignment.MiddleLeft)
         Me.btnAgregar.Image = Global.Loteria_2021.My.Resources.Resources.Agregar_Todo
         Me.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnAgregar.Location = New System.Drawing.Point(20, 15)
@@ -270,26 +271,26 @@ Partial Class frmUsuario
         Me.GroupBox4.Controls.Add(Me.btnBuscar)
         Me.GroupBox4.Location = New System.Drawing.Point(5, 213)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(563, 189)
+        Me.GroupBox4.Size = New System.Drawing.Size(563, 197)
         Me.GroupBox4.TabIndex = 3
         Me.GroupBox4.TabStop = False
         '
         'dataUsuario
         '
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        Me.dataUsuario.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        Me.dataUsuario.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dataUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dataUsuario.Location = New System.Drawing.Point(13, 49)
+        Me.dataUsuario.Location = New System.Drawing.Point(14, 61)
         Me.dataUsuario.Name = "dataUsuario"
         Me.dataUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.dataUsuario.Size = New System.Drawing.Size(539, 125)
+        Me.dataUsuario.Size = New System.Drawing.Size(536, 125)
         Me.dataUsuario.TabIndex = 6
         '
         'txtBuscar
         '
-        Me.txtBuscar.Location = New System.Drawing.Point(140, 21)
+        Me.txtBuscar.Location = New System.Drawing.Point(140, 27)
         Me.txtBuscar.Name = "txtBuscar"
         Me.txtBuscar.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtBuscar.Size = New System.Drawing.Size(315, 20)
@@ -302,7 +303,7 @@ Partial Class frmUsuario
         Me.cboBuscar.FormattingEnabled = True
         Me.ErrorProvLogin.SetIconAlignment(Me.cboBuscar, System.Windows.Forms.ErrorIconAlignment.TopLeft)
         Me.cboBuscar.Items.AddRange(New Object() {"ID", "USUARIO", "LOGIN", "HABILITADO"})
-        Me.cboBuscar.Location = New System.Drawing.Point(13, 20)
+        Me.cboBuscar.Location = New System.Drawing.Point(14, 26)
         Me.cboBuscar.Name = "cboBuscar"
         Me.cboBuscar.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.cboBuscar.Size = New System.Drawing.Size(121, 21)
@@ -316,7 +317,7 @@ Partial Class frmUsuario
         Me.btnBuscar.Location = New System.Drawing.Point(461, 17)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.btnBuscar.Size = New System.Drawing.Size(91, 26)
+        Me.btnBuscar.Size = New System.Drawing.Size(89, 38)
         Me.btnBuscar.TabIndex = 0
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -325,9 +326,9 @@ Partial Class frmUsuario
         'btnCerrar
         '
         Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCerrar.Location = New System.Drawing.Point(466, 408)
+        Me.btnCerrar.Location = New System.Drawing.Point(466, 416)
         Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(91, 23)
+        Me.btnCerrar.Size = New System.Drawing.Size(89, 38)
         Me.btnCerrar.TabIndex = 4
         Me.btnCerrar.Text = "Cerrar"
         Me.btnCerrar.UseVisualStyleBackColor = True
@@ -352,7 +353,7 @@ Partial Class frmUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(578, 439)
+        Me.ClientSize = New System.Drawing.Size(578, 466)
         Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)

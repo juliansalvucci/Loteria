@@ -67,9 +67,9 @@ Partial Class frmApuesta
         Me.GroupBox1.Controls.Add(Me.cboAgencia)
         Me.GroupBox1.Controls.Add(Me.txtNumero)
         Me.GroupBox1.Controls.Add(Me.IDAGENCIA)
-        Me.GroupBox1.Location = New System.Drawing.Point(8, 62)
+        Me.GroupBox1.Location = New System.Drawing.Point(5, 56)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(432, 151)
+        Me.GroupBox1.Size = New System.Drawing.Size(435, 151)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
@@ -170,43 +170,44 @@ Partial Class frmApuesta
         Me.GroupBox2.Controls.Add(Me.txtBuscar)
         Me.GroupBox2.Controls.Add(Me.cboBuscar)
         Me.GroupBox2.Controls.Add(Me.btnBuscar)
-        Me.GroupBox2.Location = New System.Drawing.Point(8, 219)
+        Me.GroupBox2.Location = New System.Drawing.Point(5, 213)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(558, 179)
+        Me.GroupBox2.Size = New System.Drawing.Size(563, 197)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         '
         'dataApuesta
         '
         Me.dataApuesta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dataApuesta.Location = New System.Drawing.Point(8, 45)
+        Me.dataApuesta.Location = New System.Drawing.Point(14, 61)
         Me.dataApuesta.Name = "dataApuesta"
-        Me.dataApuesta.Size = New System.Drawing.Size(537, 117)
+        Me.dataApuesta.Size = New System.Drawing.Size(536, 125)
         Me.dataApuesta.TabIndex = 6
         '
         'txtBuscar
         '
-        Me.txtBuscar.Location = New System.Drawing.Point(146, 17)
+        Me.txtBuscar.Location = New System.Drawing.Point(140, 27)
         Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(302, 20)
+        Me.txtBuscar.Size = New System.Drawing.Size(315, 20)
         Me.txtBuscar.TabIndex = 5
         '
         'cboBuscar
         '
         Me.cboBuscar.FormattingEnabled = True
         Me.cboBuscar.Items.AddRange(New Object() {"ID", "NUMERO"})
-        Me.cboBuscar.Location = New System.Drawing.Point(8, 16)
+        Me.cboBuscar.Location = New System.Drawing.Point(14, 26)
         Me.cboBuscar.Name = "cboBuscar"
-        Me.cboBuscar.Size = New System.Drawing.Size(132, 21)
+        Me.cboBuscar.Size = New System.Drawing.Size(121, 21)
         Me.cboBuscar.TabIndex = 5
         '
         'btnBuscar
         '
+        Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBuscar.Image = Global.Loteria_2021.My.Resources.Resources.Buscar
         Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnBuscar.Location = New System.Drawing.Point(454, 13)
+        Me.btnBuscar.Location = New System.Drawing.Point(461, 17)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(91, 26)
+        Me.btnBuscar.Size = New System.Drawing.Size(89, 38)
         Me.btnBuscar.TabIndex = 3
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -217,7 +218,7 @@ Partial Class frmApuesta
         Me.GroupBox3.Controls.Add(Me.btnEliminar)
         Me.GroupBox3.Controls.Add(Me.btnModificar)
         Me.GroupBox3.Controls.Add(Me.btnAgregar)
-        Me.GroupBox3.Location = New System.Drawing.Point(444, 62)
+        Me.GroupBox3.Location = New System.Drawing.Point(444, 56)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(122, 151)
         Me.GroupBox3.TabIndex = 1
@@ -225,6 +226,7 @@ Partial Class frmApuesta
         '
         'btnEliminar
         '
+        Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEliminar.Image = Global.Loteria_2021.My.Resources.Resources.Quitar_Todo
         Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnEliminar.Location = New System.Drawing.Point(20, 105)
@@ -237,6 +239,7 @@ Partial Class frmApuesta
         '
         'btnModificar
         '
+        Me.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnModificar.Image = Global.Loteria_2021.My.Resources.Resources.Editar
         Me.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnModificar.Location = New System.Drawing.Point(20, 59)
@@ -249,6 +252,7 @@ Partial Class frmApuesta
         '
         'btnAgregar
         '
+        Me.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAgregar.Image = Global.Loteria_2021.My.Resources.Resources.Agregar_Todo
         Me.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnAgregar.Location = New System.Drawing.Point(20, 15)
@@ -266,9 +270,9 @@ Partial Class frmApuesta
         'btnCerrar
         '
         Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCerrar.Location = New System.Drawing.Point(464, 404)
+        Me.btnCerrar.Location = New System.Drawing.Point(466, 416)
         Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(89, 23)
+        Me.btnCerrar.Size = New System.Drawing.Size(89, 38)
         Me.btnCerrar.TabIndex = 5
         Me.btnCerrar.Text = "Cerrar"
         Me.btnCerrar.UseVisualStyleBackColor = True
@@ -276,9 +280,9 @@ Partial Class frmApuesta
         'GroupBox4
         '
         Me.GroupBox4.Controls.Add(Me.Label4)
-        Me.GroupBox4.Location = New System.Drawing.Point(8, 12)
+        Me.GroupBox4.Location = New System.Drawing.Point(5, 3)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(558, 44)
+        Me.GroupBox4.Size = New System.Drawing.Size(563, 47)
         Me.GroupBox4.TabIndex = 6
         Me.GroupBox4.TabStop = False
         '
@@ -297,7 +301,7 @@ Partial Class frmApuesta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(578, 439)
+        Me.ClientSize = New System.Drawing.Size(578, 466)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.GroupBox2)
