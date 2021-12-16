@@ -64,6 +64,10 @@
                 dv.RowFilter = cboBuscar.Text & " = " & txtBuscar.Text
             End If
 
+            If txtBuscar.Text = "" Then
+                Mostrar_Datos()
+            End If
+
             If dv.Count <> 0 Then 'si la cantidad de registros de la consulta es distinta de 0
                 dataAgencia.DataSource = dv
             Else
@@ -183,6 +187,7 @@
             btnModificar.Text = "Modificar"
             dataAgencia.Enabled = True
             btnEliminar.Show()
+            btnModificar.Image = My.Resources.Quitar_Todo
             ErrProvAgencia.SetError(txtNombre, "")
         Else
             ModoPantalla = modFuncionesForm.ModoPantalla.ModoMODIFICACION
@@ -256,7 +261,7 @@
         Me.Close()
     End Sub
 
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+    Private Sub Label4_Click(sender As Object, e As EventArgs)
 
     End Sub
 

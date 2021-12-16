@@ -3,7 +3,9 @@
         Mostrar_Datos()
         Inicia_Pantalla()
     End Sub
+
     Private dt, dt2 As New DataTable
+
     Dim ModoPantalla As ModoPantalla
     Private Sub Mostrar_Datos()
         Try
@@ -21,7 +23,8 @@
             ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
 
-
+        'del mostrar tipo sorteo tomo el nombre para mostrar en el combo
+        'y por detras mando el id como valor.
         Try
             Dim FuncionMostrar As New fTipoSorteo
             dt2 = FuncionMostrar.Mostrar_TipoSorteo
@@ -73,9 +76,14 @@
             'Los cambios en los datos de DataView afectan a DataTable.
             'Los cambios en los datos de DataTable afectaran a todos los DataView asociados a el.
             If cboBuscar.SelectedItem = "ID" Then
-                dv.RowFilter = cboBuscar.Text & " = " & txtBuscar.Text '& "%'"
-                'Else
-                'dv.RowFilter = cboBuscar.Text & " = " & txtBuscar.Text
+                dv.RowFilter = cboBuscar.Text & " = " & txtBuscar.Text
+
+            ElseIf cboBuscar.SelectedItem = "TIPOSORTEO" Then
+                dv.RowFilter = cboBuscar.Text & " like '%" & txtBuscar.Text & "%'"
+            End If
+
+            If txtBuscar.Text = "" Then
+                Mostrar_Datos()
             End If
 
             If dv.Count <> 0 Then 'si la cantidad de registros de la consulta es distinta de 0
@@ -244,7 +252,7 @@
 
     Private Sub dataTipoSorteo_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dataSorteo.CellClick
         txtID.Text = dataSorteo.CurrentRow.Cells("ID").Value
-        cboSorteo.Text = dataSorteo.CurrentRow.Cells("TIPO SORTEO").Value
+        cboSorteo.Text = dataSorteo.CurrentRow.Cells("TIPOSORTEO").Value
 
         btnModificar.Enabled = True
         btnEliminar.Enabled = True

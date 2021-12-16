@@ -81,6 +81,10 @@
                 End If
             End If
 
+            If txtBuscar.Text = "" Then
+                mostrar_datos()
+            End If
+
             'Si el dataView dv retorna resultados, entonces asignarlos al DataGridView.
             'Caso contrario retornar nada.
 

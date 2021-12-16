@@ -25,10 +25,10 @@ Partial Class ReporteAgencia
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.LoteriaDataSetAgencia = New Loteria_2021.LoteriaDataSetAgencia()
+        Me.LoteriaDataSet = New Loteria_2021.LoteriaDataSet()
         Me.Reporte_AgenciaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Reporte_AgenciaTableAdapter = New Loteria_2021.LoteriaDataSetAgenciaTableAdapters.Reporte_AgenciaTableAdapter()
-        CType(Me.LoteriaDataSetAgencia, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Reporte_AgenciaTableAdapter = New Loteria_2021.LoteriaDataSetTableAdapters.Reporte_AgenciaTableAdapter()
+        CType(Me.LoteriaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Reporte_AgenciaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -45,15 +45,15 @@ Partial Class ReporteAgencia
         Me.ReportViewer1.Size = New System.Drawing.Size(800, 450)
         Me.ReportViewer1.TabIndex = 0
         '
-        'LoteriaDataSetAgencia
+        'LoteriaDataSet
         '
-        Me.LoteriaDataSetAgencia.DataSetName = "LoteriaDataSetAgencia"
-        Me.LoteriaDataSetAgencia.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.LoteriaDataSet.DataSetName = "LoteriaDataSet"
+        Me.LoteriaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Reporte_AgenciaBindingSource
         '
         Me.Reporte_AgenciaBindingSource.DataMember = "Reporte_Agencia"
-        Me.Reporte_AgenciaBindingSource.DataSource = Me.LoteriaDataSetAgencia
+        Me.Reporte_AgenciaBindingSource.DataSource = Me.LoteriaDataSet
         '
         'Reporte_AgenciaTableAdapter
         '
@@ -67,7 +67,7 @@ Partial Class ReporteAgencia
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "ReporteAgencia"
         Me.Text = "ReporteAgencia"
-        CType(Me.LoteriaDataSetAgencia, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LoteriaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Reporte_AgenciaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -75,6 +75,6 @@ Partial Class ReporteAgencia
 
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents Reporte_AgenciaBindingSource As BindingSource
-    Friend WithEvents LoteriaDataSetAgencia As LoteriaDataSetAgencia
-    Friend WithEvents Reporte_AgenciaTableAdapter As LoteriaDataSetAgenciaTableAdapters.Reporte_AgenciaTableAdapter
+    Friend WithEvents LoteriaDataSet As LoteriaDataSet
+    Friend WithEvents Reporte_AgenciaTableAdapter As LoteriaDataSetTableAdapters.Reporte_AgenciaTableAdapter
 End Class

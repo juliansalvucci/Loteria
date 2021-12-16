@@ -90,20 +90,24 @@ Partial Class frmLogin
         '
         'OK
         '
+        Me.OK.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.OK.Location = New System.Drawing.Point(333, 146)
         Me.OK.Name = "OK"
         Me.OK.Size = New System.Drawing.Size(100, 30)
         Me.OK.TabIndex = 4
         Me.OK.Text = "&Aceptar"
+        Me.OK.UseVisualStyleBackColor = False
         '
         'Cancel
         '
+        Me.Cancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.Cancel.Location = New System.Drawing.Point(439, 146)
         Me.Cancel.Name = "Cancel"
         Me.Cancel.Size = New System.Drawing.Size(100, 30)
         Me.Cancel.TabIndex = 5
         Me.Cancel.Text = "&Cancelar"
+        Me.Cancel.UseVisualStyleBackColor = False
         '
         'frmLogin
         '

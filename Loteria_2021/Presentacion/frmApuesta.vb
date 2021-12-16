@@ -100,7 +100,7 @@
             End If
 
             If txtBuscar.Text = "" Then
-                dataApuesta.DataSource = dv
+                Mostrar_Datos()
             End If
 
             If dv.Count <> 0 Then 'si la cantidad de registros de la consulta es distinta de 0

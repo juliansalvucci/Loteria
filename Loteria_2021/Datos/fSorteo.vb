@@ -115,4 +115,35 @@ Public Class fSorteo
             funcCerrarConnDB()
         End Try
     End Function
+
+    Public Function Mostrar_Reporte_Sorteo() As DataTable
+        'Función que cargará en memoria la tabla Sorteo'
+        Try
+            funcConectarDB()
+            cmd = New SqlCommand("Reporte_Sorteo") 'Se hace una unueva instancia de cmd y ejecuta el comando ("procMostrar_Sorteo") en la base de datos'
+            'tambien podria poner SELECT ID,NOMBRE,DESCRIPCION FROM TIPOSORTEO ORDER BY NOMBRE'
+            cmd.CommandType = CommandType.StoredProcedure 'Se inica que se va ejecutar un procedimiento almacenado'
+
+            cmd.Connection = CNN 'Se indica cual es la conexion activa a la base de datos'
+
+            If cmd.ExecuteNonQuery Then 'ejecuta el comando antes definido'
+                Dim dt As New DataTable 'Representa una tabla de datos relaciones en memoria'
+                Dim da As New SqlDataAdapter(cmd) 'Representa un conjunto de comandos de datos y una conexion a una base de datos que se usan para rellenar DataSet y actualizar una DB de SQL Server'
+
+                da.Fill(dt)
+
+                Return dt
+            Else
+                Return Nothing
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Atención: se ha generado un error tratando de mostrar los sorteos." &
+                            Environment.NewLine & "Descripción del error: " & Environment.NewLine &
+                            ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return Nothing
+        Finally
+            funcCerrarConnDB()
+        End Try
+    End Function
+
 End Class

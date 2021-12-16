@@ -28,10 +28,7 @@ Partial Class frmUsuario
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.CheckHabilitado = New System.Windows.Forms.CheckBox()
-        Me.LabelPassValidator = New System.Windows.Forms.Label()
-        Me.LabelPass = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtPassValidator = New System.Windows.Forms.TextBox()
         Me.txtPassword = New System.Windows.Forms.TextBox()
@@ -39,19 +36,22 @@ Partial Class frmUsuario
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.btnEliminar = New System.Windows.Forms.Button()
-        Me.btnModificar = New System.Windows.Forms.Button()
-        Me.btnAgregar = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.dataUsuario = New System.Windows.Forms.DataGridView()
         Me.txtBuscar = New System.Windows.Forms.TextBox()
         Me.cboBuscar = New System.Windows.Forms.ComboBox()
-        Me.btnBuscar = New System.Windows.Forms.Button()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.ErrProvUsuario = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.ErrorProvLogin = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.ErrorProvPass = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.ErrorProvPassV = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.btnModificar = New System.Windows.Forms.Button()
+        Me.btnAgregar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -65,10 +65,11 @@ Partial Class frmUsuario
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(5, 3)
+        Me.GroupBox1.Location = New System.Drawing.Point(-4, -5)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(563, 47)
+        Me.GroupBox1.Size = New System.Drawing.Size(589, 55)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
@@ -77,23 +78,23 @@ Partial Class frmUsuario
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label1.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Arial Black", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label1.Location = New System.Drawing.Point(10, 16)
+        Me.Label1.Location = New System.Drawing.Point(171, 16)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(542, 22)
+        Me.Label1.Size = New System.Drawing.Size(255, 27)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Formulario para realizar el Alta,Baja,Modificación y Consulta de usuarios"
+        Me.Label1.Text = "Formulario ABMC de usuarios"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.Label1.UseCompatibleTextRendering = True
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.CheckHabilitado)
-        Me.GroupBox2.Controls.Add(Me.LabelPassValidator)
-        Me.GroupBox2.Controls.Add(Me.LabelPass)
-        Me.GroupBox2.Controls.Add(Me.Label4)
+        Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.Label3)
+        Me.GroupBox2.Controls.Add(Me.Label5)
+        Me.GroupBox2.Controls.Add(Me.CheckHabilitado)
+        Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.txtPassValidator)
         Me.GroupBox2.Controls.Add(Me.txtPassword)
@@ -111,66 +112,36 @@ Partial Class frmUsuario
         Me.CheckHabilitado.AutoSize = True
         Me.CheckHabilitado.Checked = True
         Me.CheckHabilitado.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckHabilitado.Location = New System.Drawing.Point(335, 77)
+        Me.CheckHabilitado.Location = New System.Drawing.Point(308, 105)
         Me.CheckHabilitado.Name = "CheckHabilitado"
         Me.CheckHabilitado.Size = New System.Drawing.Size(73, 17)
         Me.CheckHabilitado.TabIndex = 12
         Me.CheckHabilitado.Text = "Habilitado"
         Me.CheckHabilitado.UseVisualStyleBackColor = True
         '
-        'LabelPassValidator
-        '
-        Me.LabelPassValidator.AutoSize = True
-        Me.LabelPassValidator.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelPassValidator.Location = New System.Drawing.Point(229, 51)
-        Me.LabelPassValidator.Name = "LabelPassValidator"
-        Me.LabelPassValidator.Size = New System.Drawing.Size(82, 14)
-        Me.LabelPassValidator.TabIndex = 10
-        Me.LabelPassValidator.Text = "PassValidator"
-        '
-        'LabelPass
-        '
-        Me.LabelPass.AutoSize = True
-        Me.LabelPass.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelPass.Location = New System.Drawing.Point(248, 25)
-        Me.LabelPass.Name = "LabelPass"
-        Me.LabelPass.Size = New System.Drawing.Size(63, 14)
-        Me.LabelPass.TabIndex = 9
-        Me.LabelPass.Text = "Password"
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(6, 51)
+        Me.Label4.Font = New System.Drawing.Font("Arial", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(10, 59)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(51, 14)
+        Me.Label4.Size = New System.Drawing.Size(53, 15)
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "Nombre"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(19, 78)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(38, 14)
-        Me.Label3.TabIndex = 7
-        Me.Label3.Text = "Login"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(40, 22)
+        Me.Label2.Font = New System.Drawing.Font("Arial", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(10, 21)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(17, 14)
+        Me.Label2.Size = New System.Drawing.Size(20, 16)
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "ID"
         '
         'txtPassValidator
         '
-        Me.txtPassValidator.Location = New System.Drawing.Point(316, 22)
+        Me.txtPassValidator.Location = New System.Drawing.Point(308, 59)
         Me.txtPassValidator.Name = "txtPassValidator"
         Me.txtPassValidator.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtPassValidator.Size = New System.Drawing.Size(100, 20)
@@ -178,7 +149,7 @@ Partial Class frmUsuario
         '
         'txtPassword
         '
-        Me.txtPassword.Location = New System.Drawing.Point(316, 48)
+        Me.txtPassword.Location = New System.Drawing.Point(308, 19)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtPassword.Size = New System.Drawing.Size(100, 20)
@@ -186,7 +157,7 @@ Partial Class frmUsuario
         '
         'txtLogin
         '
-        Me.txtLogin.Location = New System.Drawing.Point(72, 78)
+        Me.txtLogin.Location = New System.Drawing.Point(69, 96)
         Me.txtLogin.Name = "txtLogin"
         Me.txtLogin.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtLogin.Size = New System.Drawing.Size(100, 20)
@@ -194,7 +165,7 @@ Partial Class frmUsuario
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(72, 48)
+        Me.txtNombre.Location = New System.Drawing.Point(69, 57)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtNombre.Size = New System.Drawing.Size(100, 20)
@@ -202,7 +173,7 @@ Partial Class frmUsuario
         '
         'txtID
         '
-        Me.txtID.Location = New System.Drawing.Point(72, 19)
+        Me.txtID.Location = New System.Drawing.Point(69, 19)
         Me.txtID.Name = "txtID"
         Me.txtID.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.txtID.Size = New System.Drawing.Size(48, 20)
@@ -218,48 +189,6 @@ Partial Class frmUsuario
         Me.GroupBox3.Size = New System.Drawing.Size(122, 151)
         Me.GroupBox3.TabIndex = 2
         Me.GroupBox3.TabStop = False
-        '
-        'btnEliminar
-        '
-        Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEliminar.Image = Global.Loteria_2021.My.Resources.Resources.Eliminar
-        Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnEliminar.Location = New System.Drawing.Point(20, 105)
-        Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.btnEliminar.Size = New System.Drawing.Size(89, 38)
-        Me.btnEliminar.TabIndex = 2
-        Me.btnEliminar.Text = "Eliminar"
-        Me.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEliminar.UseVisualStyleBackColor = True
-        '
-        'btnModificar
-        '
-        Me.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnModificar.Image = Global.Loteria_2021.My.Resources.Resources.Editar
-        Me.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnModificar.Location = New System.Drawing.Point(20, 59)
-        Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.btnModificar.Size = New System.Drawing.Size(89, 40)
-        Me.btnModificar.TabIndex = 1
-        Me.btnModificar.Text = "Modificar"
-        Me.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnModificar.UseVisualStyleBackColor = True
-        '
-        'btnAgregar
-        '
-        Me.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAgregar.Image = Global.Loteria_2021.My.Resources.Resources.Agregar_Todo
-        Me.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnAgregar.Location = New System.Drawing.Point(20, 15)
-        Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.btnAgregar.Size = New System.Drawing.Size(89, 38)
-        Me.btnAgregar.TabIndex = 0
-        Me.btnAgregar.Text = "Agregar"
-        Me.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAgregar.UseVisualStyleBackColor = True
         '
         'GroupBox4
         '
@@ -297,7 +226,7 @@ Partial Class frmUsuario
         '
         'cboBuscar
         '
-        Me.cboBuscar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cboBuscar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.cboBuscar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cboBuscar.FormattingEnabled = True
         Me.ErrorProvLogin.SetIconAlignment(Me.cboBuscar, System.Windows.Forms.ErrorIconAlignment.TopLeft)
@@ -308,29 +237,16 @@ Partial Class frmUsuario
         Me.cboBuscar.Size = New System.Drawing.Size(121, 21)
         Me.cboBuscar.TabIndex = 1
         '
-        'btnBuscar
-        '
-        Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBuscar.Image = Global.Loteria_2021.My.Resources.Resources.Buscar
-        Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnBuscar.Location = New System.Drawing.Point(461, 17)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.btnBuscar.Size = New System.Drawing.Size(91, 26)
-        Me.btnBuscar.TabIndex = 0
-        Me.btnBuscar.Text = "Buscar"
-        Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnBuscar.UseVisualStyleBackColor = True
-        '
         'btnCerrar
         '
+        Me.btnCerrar.BackColor = System.Drawing.Color.Silver
         Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCerrar.Location = New System.Drawing.Point(466, 408)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(91, 23)
         Me.btnCerrar.TabIndex = 4
         Me.btnCerrar.Text = "Cerrar"
-        Me.btnCerrar.UseVisualStyleBackColor = True
+        Me.btnCerrar.UseVisualStyleBackColor = False
         '
         'ErrProvUsuario
         '
@@ -348,10 +264,101 @@ Partial Class frmUsuario
         '
         Me.ErrorProvPassV.ContainerControl = Me
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Arial", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(10, 96)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(38, 15)
+        Me.Label5.TabIndex = 13
+        Me.Label5.Text = "Login"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Arial", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(217, 21)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(74, 15)
+        Me.Label3.TabIndex = 14
+        Me.Label3.Text = "Contraseña"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Arial", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(217, 59)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(74, 30)
+        Me.Label6.TabIndex = 15
+        Me.Label6.Text = "Verificar " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Contraseña"
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.BackColor = System.Drawing.Color.Silver
+        Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBuscar.Image = Global.Loteria_2021.My.Resources.Resources.Buscar
+        Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnBuscar.Location = New System.Drawing.Point(461, 17)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.btnBuscar.Size = New System.Drawing.Size(91, 26)
+        Me.btnBuscar.TabIndex = 0
+        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnBuscar.UseVisualStyleBackColor = False
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.BackColor = System.Drawing.Color.Silver
+        Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEliminar.Image = Global.Loteria_2021.My.Resources.Resources.Eliminar
+        Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnEliminar.Location = New System.Drawing.Point(20, 105)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.btnEliminar.Size = New System.Drawing.Size(89, 38)
+        Me.btnEliminar.TabIndex = 2
+        Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEliminar.UseVisualStyleBackColor = False
+        '
+        'btnModificar
+        '
+        Me.btnModificar.BackColor = System.Drawing.Color.Silver
+        Me.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnModificar.Image = Global.Loteria_2021.My.Resources.Resources.Editar
+        Me.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnModificar.Location = New System.Drawing.Point(20, 59)
+        Me.btnModificar.Name = "btnModificar"
+        Me.btnModificar.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.btnModificar.Size = New System.Drawing.Size(89, 40)
+        Me.btnModificar.TabIndex = 1
+        Me.btnModificar.Text = "Modificar"
+        Me.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnModificar.UseVisualStyleBackColor = False
+        '
+        'btnAgregar
+        '
+        Me.btnAgregar.BackColor = System.Drawing.Color.Silver
+        Me.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAgregar.Image = Global.Loteria_2021.My.Resources.Resources.Agregar_Todo
+        Me.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnAgregar.Location = New System.Drawing.Point(20, 15)
+        Me.btnAgregar.Name = "btnAgregar"
+        Me.btnAgregar.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.btnAgregar.Size = New System.Drawing.Size(89, 38)
+        Me.btnAgregar.TabIndex = 0
+        Me.btnAgregar.Text = "Agregar"
+        Me.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAgregar.UseVisualStyleBackColor = False
+        '
         'frmUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Gray
         Me.ClientSize = New System.Drawing.Size(578, 439)
         Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.GroupBox4)
@@ -399,13 +406,13 @@ Partial Class frmUsuario
     Friend WithEvents btnCerrar As Button
     Friend WithEvents ErrProvUsuario As ErrorProvider
     Friend WithEvents Label1 As Label
-    Friend WithEvents LabelPassValidator As Label
-    Friend WithEvents LabelPass As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents CheckHabilitado As CheckBox
     Friend WithEvents ErrorProvLogin As ErrorProvider
     Friend WithEvents ErrorProvPass As ErrorProvider
     Friend WithEvents ErrorProvPassV As ErrorProvider
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label5 As Label
 End Class

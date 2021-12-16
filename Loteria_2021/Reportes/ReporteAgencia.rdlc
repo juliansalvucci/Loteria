@@ -6,10 +6,10 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>7.27573cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>7.27573cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -56,7 +56,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>PORCENTAJE DE GANANCIA</Value>
+                              <Value>PORCENTAJEGANANCIA</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -164,10 +164,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSetAgencia</DataSetName>
-        <Top>1.74307cm</Top>
-        <Left>0.81703cm</Left>
+        <Top>1.92828cm</Top>
+        <Left>6.26745cm</Left>
         <Height>1.2cm</Height>
-        <Width>14.55146cm</Width>
+        <Width>5cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -181,10 +181,10 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Agencia con mayor procentaje de ganancias.</Value>
+                <Value>Agencia con mayor porcentaje de ganancias.</Value>
                 <Style>
                   <FontStyle>Italic</FontStyle>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>16pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -193,10 +193,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
-        <Top>0.44662cm</Top>
-        <Left>0.81703cm</Left>
-        <Height>1.12007cm</Height>
-        <Width>13.95646cm</Width>
+        <Top>0.04974cm</Top>
+        <Left>2.32516cm</Left>
+        <Height>1.44667cm</Height>
+        <Width>12.89812cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -225,18 +225,18 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="LoteriaDataSetAgencia">
+    <DataSource Name="LoteriaDataSet">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>1bf2b8ec-d52a-484d-ad10-bf70b3b77084</rd:DataSourceID>
+      <rd:DataSourceID>264714e1-ba99-4032-ae18-a5018bdcfa68</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="DataSetAgencia">
       <Query>
-        <DataSourceName>LoteriaDataSetAgencia</DataSourceName>
+        <DataSourceName>LoteriaDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -250,8 +250,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>LoteriaDataSetAgencia</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\julia\source\repos\Loteria_2021\Loteria_2021\LoteriaDataSetAgencia.xsd</rd:SchemaPath>
+        <rd:DataSetName>LoteriaDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\julia\source\repos\Loteria_2021\Loteria_2021\LoteriaDataSet.xsd</rd:SchemaPath>
         <rd:TableName>Reporte_Agencia</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -260,5 +260,5 @@
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>e7282b27-ad7f-4b11-b017-946d55aae29d</rd:ReportID>
+  <rd:ReportID>b7070618-7a61-43c3-b679-c0c06cbd130b</rd:ReportID>
 </Report>

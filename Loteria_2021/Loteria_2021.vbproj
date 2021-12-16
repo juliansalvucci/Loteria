@@ -117,16 +117,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LoteriaDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="LoteriaDataSetAgencia.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LoteriaDataSetAgencia.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="LoteriaDataSetLote.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LoteriaDataSetLote.xsd</DependentUpon>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -192,10 +182,22 @@
     <Compile Include="Reportes\ReporteAgencia.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\ReporteApuesta.Designer.vb">
-      <DependentUpon>ReporteApuesta.vb</DependentUpon>
+    <Compile Include="Reportes\ReporteApuestas.Designer.vb">
+      <DependentUpon>ReporteApuestas.vb</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\ReporteApuesta.vb">
+    <Compile Include="Reportes\ReporteApuestas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteSorteo.Designer.vb">
+      <DependentUpon>ReporteSorteo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteSorteo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteSorteoFuncional.Designer.vb">
+      <DependentUpon>ReporteSorteoFuncional.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteSorteoFuncional.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reportes\ReporteUsuarios.Designer.vb">
@@ -243,10 +245,18 @@
     <EmbeddedResource Include="Reportes\ReporteAgencia.resx">
       <DependentUpon>ReporteAgencia.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\ReporteApuesta.rdlc" />
-    <EmbeddedResource Include="Reportes\ReporteApuesta.resx">
-      <DependentUpon>ReporteApuesta.vb</DependentUpon>
+    <EmbeddedResource Include="Reportes\ReporteApuestas.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteApuestas.resx">
+      <DependentUpon>ReporteApuestas.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteSorteo.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteSorteo.resx">
+      <DependentUpon>ReporteSorteo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteSorteoFuncional.resx">
+      <DependentUpon>ReporteSorteoFuncional.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteUsuarios.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteUsuarios.resx">
       <DependentUpon>ReporteUsuarios.vb</DependentUpon>
     </EmbeddedResource>
@@ -254,7 +264,6 @@
     <EmbeddedResource Include="Reportes\ReporteUsuarios2.resx">
       <DependentUpon>ReporteUsuarios2.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\RUsuarios.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="LoteriaDataSet.xsc">
@@ -267,28 +276,6 @@
     </None>
     <None Include="LoteriaDataSet.xss">
       <DependentUpon>LoteriaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="LoteriaDataSetAgencia.xsc">
-      <DependentUpon>LoteriaDataSetAgencia.xsd</DependentUpon>
-    </None>
-    <None Include="LoteriaDataSetAgencia.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>LoteriaDataSetAgencia.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="LoteriaDataSetAgencia.xss">
-      <DependentUpon>LoteriaDataSetAgencia.xsd</DependentUpon>
-    </None>
-    <None Include="LoteriaDataSetLote.xsc">
-      <DependentUpon>LoteriaDataSetLote.xsd</DependentUpon>
-    </None>
-    <None Include="LoteriaDataSetLote.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>LoteriaDataSetLote.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="LoteriaDataSetLote.xss">
-      <DependentUpon>LoteriaDataSetLote.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -318,6 +305,7 @@
     <None Include="Resources\Buscar.gif" />
     <None Include="Resources\Editar.gif" />
     <None Include="Resources\Eliminar.gif" />
+    <None Include="Resources\bingo.jpg" />
     <Content Include="SqlServerTypes\Loader.cs" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">

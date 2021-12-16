@@ -29,17 +29,18 @@ Partial Class frmPrincipal
         Me.TipoSorteroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UsuarioToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.AgenciaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ApuestaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SorteoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RegistrosEn24hsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeshabilitadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AgenciaToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ApuestaToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.ApuestaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SorteoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ApuestaToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RegistrosEn24hsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DeshabilitadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SorteoToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
         Me.SuspendLayout()
@@ -63,24 +64,36 @@ Partial Class frmPrincipal
         'TipoSorteroToolStripMenuItem
         '
         Me.TipoSorteroToolStripMenuItem.Name = "TipoSorteroToolStripMenuItem"
-        Me.TipoSorteroToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.TipoSorteroToolStripMenuItem.Size = New System.Drawing.Size(138, 22)
         Me.TipoSorteroToolStripMenuItem.Text = "Tipo Sortero"
         '
         'UsuarioToolStripMenuItem1
         '
         Me.UsuarioToolStripMenuItem1.Name = "UsuarioToolStripMenuItem1"
-        Me.UsuarioToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.UsuarioToolStripMenuItem1.Size = New System.Drawing.Size(138, 22)
         Me.UsuarioToolStripMenuItem1.Text = "Usuario"
         '
         'AgenciaToolStripMenuItem
         '
         Me.AgenciaToolStripMenuItem.Name = "AgenciaToolStripMenuItem"
-        Me.AgenciaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AgenciaToolStripMenuItem.Size = New System.Drawing.Size(138, 22)
         Me.AgenciaToolStripMenuItem.Text = "Agencia"
+        '
+        'ApuestaToolStripMenuItem
+        '
+        Me.ApuestaToolStripMenuItem.Name = "ApuestaToolStripMenuItem"
+        Me.ApuestaToolStripMenuItem.Size = New System.Drawing.Size(138, 22)
+        Me.ApuestaToolStripMenuItem.Text = "Apuesta"
+        '
+        'SorteoToolStripMenuItem
+        '
+        Me.SorteoToolStripMenuItem.Name = "SorteoToolStripMenuItem"
+        Me.SorteoToolStripMenuItem.Size = New System.Drawing.Size(138, 22)
+        Me.SorteoToolStripMenuItem.Text = "Sorteo"
         '
         'ReportesToolStripMenuItem
         '
-        Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsuariosToolStripMenuItem, Me.AgenciaToolStripMenuItem1, Me.ApuestaToolStripMenuItem1})
+        Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsuariosToolStripMenuItem, Me.AgenciaToolStripMenuItem1, Me.ApuestaToolStripMenuItem1, Me.SorteoToolStripMenuItem1})
         Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
         Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
         Me.ReportesToolStripMenuItem.Text = "Reportes"
@@ -92,11 +105,29 @@ Partial Class frmPrincipal
         Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.UsuariosToolStripMenuItem.Text = "Usuarios"
         '
+        'RegistrosEn24hsToolStripMenuItem
+        '
+        Me.RegistrosEn24hsToolStripMenuItem.Name = "RegistrosEn24hsToolStripMenuItem"
+        Me.RegistrosEn24hsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.RegistrosEn24hsToolStripMenuItem.Text = "Registros en 24hs"
+        '
+        'DeshabilitadosToolStripMenuItem
+        '
+        Me.DeshabilitadosToolStripMenuItem.Name = "DeshabilitadosToolStripMenuItem"
+        Me.DeshabilitadosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DeshabilitadosToolStripMenuItem.Text = "Deshabilitados"
+        '
         'AgenciaToolStripMenuItem1
         '
         Me.AgenciaToolStripMenuItem1.Name = "AgenciaToolStripMenuItem1"
-        Me.AgenciaToolStripMenuItem1.Size = New System.Drawing.Size(119, 22)
+        Me.AgenciaToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.AgenciaToolStripMenuItem1.Text = "Agencia"
+        '
+        'ApuestaToolStripMenuItem1
+        '
+        Me.ApuestaToolStripMenuItem1.Name = "ApuestaToolStripMenuItem1"
+        Me.ApuestaToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.ApuestaToolStripMenuItem1.Text = "Apuesta"
         '
         'StatusStrip
         '
@@ -113,43 +144,21 @@ Partial Class frmPrincipal
         Me.ToolStripStatusLabel.Size = New System.Drawing.Size(42, 17)
         Me.ToolStripStatusLabel.Text = "Estado"
         '
-        'ApuestaToolStripMenuItem
+        'SorteoToolStripMenuItem1
         '
-        Me.ApuestaToolStripMenuItem.Name = "ApuestaToolStripMenuItem"
-        Me.ApuestaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.ApuestaToolStripMenuItem.Text = "Apuesta"
-        '
-        'SorteoToolStripMenuItem
-        '
-        Me.SorteoToolStripMenuItem.Name = "SorteoToolStripMenuItem"
-        Me.SorteoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.SorteoToolStripMenuItem.Text = "Sorteo"
-        '
-        'ApuestaToolStripMenuItem1
-        '
-        Me.ApuestaToolStripMenuItem1.Name = "ApuestaToolStripMenuItem1"
-        Me.ApuestaToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
-        Me.ApuestaToolStripMenuItem1.Text = "Apuesta"
-        '
-        'RegistrosEn24hsToolStripMenuItem
-        '
-        Me.RegistrosEn24hsToolStripMenuItem.Name = "RegistrosEn24hsToolStripMenuItem"
-        Me.RegistrosEn24hsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.RegistrosEn24hsToolStripMenuItem.Text = "Registros en 24hs"
-        '
-        'DeshabilitadosToolStripMenuItem
-        '
-        Me.DeshabilitadosToolStripMenuItem.Name = "DeshabilitadosToolStripMenuItem"
-        Me.DeshabilitadosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.DeshabilitadosToolStripMenuItem.Text = "Deshabilitados"
+        Me.SorteoToolStripMenuItem1.Name = "SorteoToolStripMenuItem1"
+        Me.SorteoToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.SorteoToolStripMenuItem1.Text = "Sorteo"
         '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.Loteria_2021.My.Resources.Resources.bingo
         Me.ClientSize = New System.Drawing.Size(632, 453)
         Me.Controls.Add(Me.MenuStrip)
         Me.Controls.Add(Me.StatusStrip)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip
         Me.MaximizeBox = False
@@ -180,4 +189,5 @@ Partial Class frmPrincipal
     Friend WithEvents ApuestaToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents RegistrosEn24hsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DeshabilitadosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SorteoToolStripMenuItem1 As ToolStripMenuItem
 End Class

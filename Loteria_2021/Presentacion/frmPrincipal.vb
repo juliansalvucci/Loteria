@@ -109,14 +109,18 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub ApuestaToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ApuestaToolStripMenuItem1.Click
-        ReporteApuesta.Show()
+        ReporteApuestas.Show()
+    End Sub
+
+    Private Sub RegistrosEn24hsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrosEn24hsToolStripMenuItem.Click
+        ReporteUsuarios.Show()
     End Sub
 
     Private Sub DeshabilitadosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeshabilitadosToolStripMenuItem.Click
         ReporteUsuarios2.Show()
     End Sub
 
-    Private Sub RegistrosEn24hsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrosEn24hsToolStripMenuItem.Click
-        ReporteUsuarios.Show()
+    Private Sub SorteoToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles SorteoToolStripMenuItem1.Click
+        ReporteSorteo.Show()
     End Sub
 End Class

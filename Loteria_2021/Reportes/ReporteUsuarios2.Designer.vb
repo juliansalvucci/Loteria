@@ -25,17 +25,17 @@ Partial Class ReporteUsuarios2
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.LoteriaDataSetLote = New Loteria_2021.LoteriaDataSetLote()
+        Me.LoteriaDataSet = New Loteria_2021.LoteriaDataSet()
         Me.Mostrar_Usuarios_DeshabilitadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Mostrar_Usuarios_DeshabilitadosTableAdapter = New Loteria_2021.LoteriaDataSetLoteTableAdapters.Mostrar_Usuarios_DeshabilitadosTableAdapter()
-        CType(Me.LoteriaDataSetLote, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Mostrar_Usuarios_DeshabilitadosTableAdapter = New Loteria_2021.LoteriaDataSetTableAdapters.Mostrar_Usuarios_DeshabilitadosTableAdapter()
+        CType(Me.LoteriaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Mostrar_Usuarios_DeshabilitadosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ReportViewer1
         '
         Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
-        ReportDataSource1.Name = "DataSet1"
+        ReportDataSource1.Name = "DataSetU2"
         ReportDataSource1.Value = Me.Mostrar_Usuarios_DeshabilitadosBindingSource
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "Loteria_2021.ReporteUsuarios2.rdlc"
@@ -45,15 +45,15 @@ Partial Class ReporteUsuarios2
         Me.ReportViewer1.Size = New System.Drawing.Size(800, 450)
         Me.ReportViewer1.TabIndex = 0
         '
-        'LoteriaDataSetLote
+        'LoteriaDataSet
         '
-        Me.LoteriaDataSetLote.DataSetName = "LoteriaDataSetLote"
-        Me.LoteriaDataSetLote.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.LoteriaDataSet.DataSetName = "LoteriaDataSet"
+        Me.LoteriaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Mostrar_Usuarios_DeshabilitadosBindingSource
         '
         Me.Mostrar_Usuarios_DeshabilitadosBindingSource.DataMember = "Mostrar_Usuarios_Deshabilitados"
-        Me.Mostrar_Usuarios_DeshabilitadosBindingSource.DataSource = Me.LoteriaDataSetLote
+        Me.Mostrar_Usuarios_DeshabilitadosBindingSource.DataSource = Me.LoteriaDataSet
         '
         'Mostrar_Usuarios_DeshabilitadosTableAdapter
         '
@@ -67,7 +67,7 @@ Partial Class ReporteUsuarios2
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "ReporteUsuarios2"
         Me.Text = "ReporteUsuarios2"
-        CType(Me.LoteriaDataSetLote, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LoteriaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Mostrar_Usuarios_DeshabilitadosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -75,6 +75,6 @@ Partial Class ReporteUsuarios2
 
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents Mostrar_Usuarios_DeshabilitadosBindingSource As BindingSource
-    Friend WithEvents LoteriaDataSetLote As LoteriaDataSetLote
-    Friend WithEvents Mostrar_Usuarios_DeshabilitadosTableAdapter As LoteriaDataSetLoteTableAdapters.Mostrar_Usuarios_DeshabilitadosTableAdapter
+    Friend WithEvents LoteriaDataSet As LoteriaDataSet
+    Friend WithEvents Mostrar_Usuarios_DeshabilitadosTableAdapter As LoteriaDataSetTableAdapters.Mostrar_Usuarios_DeshabilitadosTableAdapter
 End Class
